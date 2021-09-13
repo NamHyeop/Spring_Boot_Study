@@ -18,6 +18,8 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService){
         this.memberService = memberService;
+        //Aop를 활용한 동작과정을 테스트할 때 사용하는 과정, proxy에 담고 spring bean에 옮겨야 하므로 과정들이 출력된다.
+        System.out.println("memberService = "+ memberService.getClass());
     }
 
     @GetMapping("/members/new") ///1.members/new가 들어오면

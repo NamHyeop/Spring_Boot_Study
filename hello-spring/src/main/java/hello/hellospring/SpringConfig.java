@@ -1,5 +1,6 @@
 package hello.hellospring;
 
+import hello.hellospring.aop.TimeTraceAop;
 import hello.hellospring.repository.*;
 import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,5 +50,11 @@ public class SpringConfig {
 ////        return new JdbcMemberRepository(dataSource); // Jdbc 기법을 사용한 데이터베이스 연결
 ////        return new JdbcTemplateMemberRepository(dataSource); //JdbcTemplate를 활용 데이터베이스 연결
 ////        return new JpaMemberRepository(em); //JPA를 활용한 연결
+//    }
+
+    //TimeTraceAop를 AOP에 따로 추가해주는 과정
+//    @Bean
+//    public TimeTraceAop timeTraceAop(){
+//        return new TimeTraceAop();
 //    }
 }
