@@ -14,8 +14,11 @@ public class SingletonTest {
     @Test
     public void singletonBeenFind(){
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SingletonBean.class);
+        System.out.println(" what is");
         SingletonBean bean1 = ac.getBean(SingletonBean.class);
+        System.out.println("make bean1");
         SingletonBean bean2 = ac.getBean(SingletonBean.class);
+        System.out.println("make baan2");
         System.out.println("bean1 = " + bean1);
         System.out.println("bean2 = " + bean2);
         assertThat(bean1).isSameAs(bean2);
