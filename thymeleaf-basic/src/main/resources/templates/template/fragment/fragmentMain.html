@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>부분 포함</h1>
+<h2>부분 포함 insert</h2>
+<!--이 부분에 footer의 copy 내용을 넣어준다.-->
+<div th:insert="~{template/fragment/footer :: copy}"></div>
+<h2>부분 포함 replace</h2>
+<!--이 부분에 footer의 copy 내용을 넣어준다. replace이기 때문에 옆의 div 데이터도 사라진다.-->
+<div th:replace="~{template/fragment/footer :: copy}"></div>
+<h2>부분 포함 단순 표현식</h2>
+<!--짧다면 ~표시를 배서 표현할 수도 있다. 그러나 위의 방법을 더 권장한다.-->
+<div th:replace="template/fragment/footer :: copy"></div>
+<h1>파라미터 사용</h1>
+<!--매개변수를 사용한 방법도 가능하다.-->
+<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터 2')}"></div>
+</body>
+</html>

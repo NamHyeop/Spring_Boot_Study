@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<!--이렇게 xmlns:th="http://www.thymeleaf.org"를 붙치면 th를 통하여 타임리프 사용이 가능하다. -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+<!--    타임리프 예시 실행되면 기존의 8번줄 코드를 7번줄 코드로 바꿈-->
+    <link th:href="@{/css/bootstrap.min.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" style="max-width: 600px">
+    <div class="py-5 text-center">
+        <h2>상품 목록</h2>
+    </div>
+    <div class="row">
+        <div class="col">
+            <!-- th:onclick을 사용하면 url이 /basic/items/add로 이동한다 -->
+            <button class="btn btn-primary float-end"
+                    onclick="location.href='addForm.html'"
+                    th:onclick="|location.href='@{/basic/items/add}'|"
+                    type="button">상품 등록</button>
+        </div>
+    </div>
+    <hr class="my-4">
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>상품명</th>
+                <th>가격</th>
+                <th>수량</th>
+            </tr>
+            </thead>
+            <tbody>
+<!--            모델로 전송한 items을 item 변수에 넣어준다.-->
+            <tr th:each="item : ${items}">
+<!--                데이터를 뿌릴 때는 th:text=""를 사용한다 현재 예시에서는 그러면 옆에 회원id에 값이 들어가게 된다.-->
+<!--                th:href는 href의 기존 경로를 설정한 th:href링크로 바꿔준다, 변수를 사용하지 않고 직접 바꾼 방법이 40번줄, 변수선언으로 바꾼 방법이 41번줄이다.-->
+                <td><a href="item.html" th:href="@{/basic/items/${item.id}}" th:text="${item.id}">회원id</a></td>
+                <td><a href="item.html" th:href="@{/basic/items/{itemId}(itemId=${item.id})}"th:text="${item.itemName}">상품명</a></td>
+                <td th:text="${item.price}">10000</td>
+                <td th:text="${item.quantity}">10</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div> <!-- /container -->
+</body>
+</html>
