@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 자바스크립트 인라인 사용 전 -->
+<script>
+    //userA라는 변수명이 들어가서 오류 발생 F12로 확인 가능 서버 실행 후 웹페이지에서 오류확인 가능
+    var username = [[${user.username}]];
+    var age = [[${user.age}]];
+    //자바스크립트 내추럴 템플릿
+    //네추럴 템플릿이란 타임리프가 HTML 파일을 직접 열어도 동작하는 기능을 의미 밑에서는 원래 의도가 user.username이 들어가는것이지만 test username이 들어간다
+    var username2 = /*[[${user.username}]]*/ "test username";
+    //객체(이런 식으로 넣으면 user의 to_string이 들어가게 된다.)
+    var user = [[${user}]];
+</script>
+ 자바스크립트 인라인 사용 후
+<script th:inline="javascript">
+    var username = [[${user.username}]];
+    var age = [[${user.age}]];
+    //자바스크립트 내추럴 템플릿 자바스크립트 주석을 해제하고 user.username을 넣는다.
+    var username2 = /*[[${user.username}]]*/ "test username";
+    //객체
+    var user = [[${user}]];
+</script>
+ 자바스크립트 인라인 each
+<script th:inline="javascript">
+    [# th:each="user, stat : ${users}"]
+    var user[[${stat.count}]] = [[${user}]];
+    [/]
+</script>
+</body>
+</html>
