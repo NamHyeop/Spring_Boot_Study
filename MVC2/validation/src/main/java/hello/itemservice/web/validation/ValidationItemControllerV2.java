@@ -11,6 +11,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -25,6 +27,12 @@ import java.util.Map;
 public class ValidationItemControllerV2 {
 
     private final ItemRepository itemRepository;
+    private final ItemValidator itemValidator;
+
+    @InitBinder
+    public void init(WebDataBinder dataBinder){
+        dataBinder.addValidators(itemValidator);
+    }
 
     @GetMapping
     public String items(Model model) {
@@ -176,48 +184,43 @@ public class ValidationItemControllerV2 {
         return "redirect:/validation/v2/items/{itemId}";
     }
 
-    @PostMapping("/add")
+    //V3의 adderorr 부분을 rejectValue를 사용해서 좀 더 간편화하게 오류 코드 작성을 한다.
+    //@PostMapping("/add")
     public String addItemV4(@ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
 
-        /**
-         * BindingResult는 objectName과 target을 가지고 있음 like 밑에처럼
-         * log.info("objectName={]", bindingResult.getObjectName());
-         * log.info("target={}", bindingResult.getTarget());
-         *
-         * 그러므로
-         * bindingResult.addError(new FieldError("bindingResult.getObjectName(), itenName, item.getItemName(), false, null, new String[]{"required.item.itemName"},null, null));
-         * 도 가능하다.
-         */
-
-        //밑의 검증 로직과 같은 코드. 훨씬 더 간결하 대신 empty나 공백 같은 단순한 기능만 사용이 가능하다.
-        ValidationUtils.rejectIfEmptyOrWhitespace(bindingResult, "itemName", "required");
-
-
-        //검증 로직
-        //BindingResult에 객체를 포함해야 할 때는 FieldError를 활용해서 포함시켜야한다.
-//        if(!StringUtils.hasText(item.getItemName())){
-//            //3번째 매개변수는 오류가 난 문장을 의미한다. 4번째 매개변수 bindingFailure는 입력데이터값이 제대로 안들어오면 true, 입력 데이터값이 제대로 들어오는데 자료형 오류면 false를 줘야 한다.
-//            //codes와 argument는 defaultMessage를 대체할 수 있는 매개변수이다.
-//            //bindingResult.addError(new FieldError("item", "itemName", item.getItemName(), false, new String[]{"required.item.itemName"}, null, null));
-//            bindingResult.rejectValue("itemName", "required");
-//        }
-        if(item.getPrice() == null || item.getPrice() < 1000 || item.getPrice() > 1000000){
-            //bindingResult.addError(new FieldError("item", "price", item.getPrice(), false, new String[]{"range.item.price"}, new Object[]{1000, 1000000}, null));
-            bindingResult.rejectValue("price", "range", new Object[]{1000, 10000000}, null);
+        if(bindingResult.hasErrors()){
+            log.info("errors = {}", bindingResult);
+            return "validation/v2/addForm";
         }
-        if(item.getQuantity() == null || item.getQuantity() >= 9999){
-            //bindingResult.addError(new FieldError("item", "quantity", item.getQuantity(), false, new String[]{"max.item.quantity"}, new Object[]{9999},  null));
-            bindingResult.rejectValue("quantity", "max", new Object[]{9999}, null);
+
+        Item savedItem = itemRepository.save(item);
+        redirectAttributes.addAttribute("itemId", savedItem.getId());
+        redirectAttributes.addAttribute("status", true);
+        return "redirect:/validation/v2/items/{itemId}";
+    }
+
+    //v5에서는 스프링의 오류코드를 한국어로 간편화(errors에서 편집) 하고 검증 부분을 ItemValidator로 따로 구분하여 클래스를 나눈다.
+    //@PostMapping("/add")
+    public String addItemV5(@ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
+
+        itemValidator.validate(item, bindingResult);
+
+        if(bindingResult.hasErrors()){
+            log.info("errors = {}", bindingResult);
+            return "validation/v2/addForm";
         }
-        //특정 필드가 아닌 복합 룰 검증
-        if(item.getPrice() != null && item.getQuantity() != null){
-            int resultPrice = item.getPrice() * item.getQuantity();
-            if(resultPrice < 10000){
-                //defaultMessage값에 값을 안주고 codes, argument에만 null값을 주는 것도 가능하다.
-                //bindingResult.addError(new ObjectError("item", new String[]{"totalPriceMin"}, new Object[]{10000, resultPrice}, null));
-                bindingResult.reject("totalPriceMin", new Object[]{10000, resultPrice}, null);
-            }
-        }
+
+        Item savedItem = itemRepository.save(item);
+        redirectAttributes.addAttribute("itemId", savedItem.getId());
+        redirectAttributes.addAttribute("status", true);
+        return "redirect:/validation/v2/items/{itemId}";
+    }
+
+    //v6에서는 @Validated를 사용해 v5의 validate를 사용하는 방식을 어노테이션을 사용하여 좀 더 간편하게 사용하는 버전으로 업그레이드한다.
+    //이러한 방식은 V5와 논리적으로 동일한다. 실행 순서는 @Validated가 @ModelAttribute은 객체를 검사하고 오류가 있을 경우 BindingRsult에 담아준다.
+
+    @PostMapping("/add")
+    public String addItemV6(@Validated @ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
 
         if(bindingResult.hasErrors()){
             log.info("errors = {}", bindingResult);
