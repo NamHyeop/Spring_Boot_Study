@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+<!--    괄호가 한 쌍이면 Converter를 적용 안하는것이고 두 쌍이면 적용하는것이다.-->
+    <li>${number}: <span th:text="${number}"></span></li>
+    <li>${{number}}: <span th:text="${{number}}"></span></li>
+    <li>${ipPort}: <span th:text="${ipPort}"></span></li>
+    <li>${{ipPort}}: <span th:text="${{ipPort}}"></span></li>
+</ul>
+</body>
+
+</html>
