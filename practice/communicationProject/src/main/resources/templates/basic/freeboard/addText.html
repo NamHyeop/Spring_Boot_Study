@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link href="../css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 560px;
+        } </style>
+</head>
+<body>
+<div class="container">
+    <div class="py-5 text-center">
+        <h2>글 쓰기</h2></div>
+    <h4 class="mb-3">글 입력</h4>
+    <hr class="floor_line">
+<!--    th:action에 속성 부여 안할경우 자기 자신 주소로 다시 옴. add, post 기법에 자주 사용-->
+    <form action="text.html" th:action method="post">
+        <div>
+            <label for="textName">글 제목</label><br>
+            <input type="text" id="textName" name="textName" class="form-
+control" placeholder="제목을 입력하세요"></div>
+        <hr class="floor_line">
+        <div>
+            <label for="textContent">글 내용</label>
+            <input type="text" id="textContent" name="textContent" class="form-control" style="width:530px;height:200px;font-size:20px;" placeholder="내용을 입력하세요">
+        </div>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col">
+                <button class="w-100 btn btn-primary btn-lg" type="submit">
+                    글 등록
+                </button>
+            </div>
+            <div class="col">
+                <button class="w-100 btn btn-secondary btn-lg"
+                        onclick="location.href='freeTexts.html'"
+                        th:onclick="|location.href='@{/basic/freeboard/freeTexts}'|"
+                        type="button">
+                    취소
+                </button>
+            </div>
+        </div>
+    </form>
+</div> <!-- /container -->
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link th:href="@{/css/bootstrap.min.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" style="max-width: 600px">
+    <div class="py-5 text-center">
+        <h2>글 목록</h2></div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary float-end"
+                    onclick="location.href='addText.html'"
+                    th:onclick="|location.href='@{/basic/freeboard/addText}'|"
+                    type="button">글 등록</button>
+        </div>
+    </div>
+    <hr class="my-4">
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>글 제목</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="text : ${freeTexts}">
+                <td><a href="text.html" th:href="@{/basic/freeboard/{textId}(textId=${text.id})}" th:text="${text.id}">글ID</a> </td>
+                <td><a href="text.html" th:href="@{/basic/freeboard/{textId}(textId=${text.id})}" th:text="${text.textName}">글 제목</a></td>
+            </tr>
+<!--            <tr>-->
+<!--                <td><a href="text.html">1</a></td>-->
+<!--                <td><a href="text.html">테스트 글1</a></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><a href="text.html">2</a></td>-->
+<!--                <td><a href="text.html">테스트 글2</a></td>-->
+<!--            </tr>-->
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

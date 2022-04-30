@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link href="../css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 560px;
+        } </style>
+</head>
+<body>
+<div class="container">
+    <div class="py-5 text-center">
+        <h2>자유 게시판</h2></div>
+    <div>
+        <h2 th:if="${param.status}" th:text="'저장 완료!'"></h2>
+        <label for="textId">글 ID</label>
+        <input type="text" id="textId" name="textId" class="form-control"
+               value="1" th:value="${text.id}" readonly>
+    </div>
+    <div>
+        <label for="textName">글 제목</label>
+        <input type="text" id="textName" name="textName" class="form-control"
+               value="글 제목" th:value="${text.textName}" readonly></div>
+    <div>
+        <label for="textContent">글 내용</label>
+        <input type="text" id="textContent" name="textContent" class="form-control"
+               value="내용" th:value="${text.textContent}" style="width:530px;height:200px;font-size:15px;" readonly>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+        <div class="col">
+            <button class="w-100 btn btn-primary btn-lg"
+                    onclick="location.href='editText.html'"
+                    th:onclick="|location.href='@{/basic/freeboard/editText/{textId}/edit(textId=${text.id})}'|"
+                    type="button">글 수정
+            </button>
+        </div>
+        <div class="col">
+            <button class="w-100 btn btn-secondary btn-lg"
+                    onclick="location.href='freeTexts.html'"
+                    th:onclick="|location.href='@{/basic/freeboard/freeTexts}'|"
+                    type="button">목록으로
+            </button>
+        </div>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>
