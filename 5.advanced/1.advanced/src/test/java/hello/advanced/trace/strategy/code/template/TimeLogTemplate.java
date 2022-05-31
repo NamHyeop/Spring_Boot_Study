@@ -2,6 +2,10 @@ package hello.advanced.trace.strategy.code.template;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * callBack 패턴 Template
+ */
+
 @Slf4j
 public class TimeLogTemplate {
     public void execute(Callback callback) {

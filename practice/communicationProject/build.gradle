@@ -30,6 +30,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 
+	//Json Web Token 사용을 위한 dependencies 추가
+	// https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
 	//p6spy 추가
 	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.7.1'
 }

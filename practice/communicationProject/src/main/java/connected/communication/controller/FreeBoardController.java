@@ -25,7 +25,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/basic")
 @RequiredArgsConstructor
-public class FrontBoardController {
+public class FreeBoardController {
     private final FreeBoardRepository freeBoardRepository;
 
     //게시판 목록 조회 Controller
@@ -69,7 +69,7 @@ public class FrontBoardController {
         return "basic/freeboard/editText";
     }
 
-    //게시글 업데이터 Controllr
+    //게시글 업데이트 Controllr
     @PostMapping("/freeboard/editText/{textId}/edit")
     public String reEdit(@PathVariable Long textId, @ModelAttribute Text text){
         freeBoardRepository.update(textId, text);

@@ -3,14 +3,14 @@ package hello.advanced.trace.callback;
 import hello.advanced.trace.TraceStatus;
 import hello.advanced.trace.logTrace.LogTrace;
 
-public class TraceTemplate {
+public class TraceTemplate{
     private final LogTrace trace;
 
     public TraceTemplate(LogTrace trace) {
         this.trace = trace;
     }
 
-    public <T> T execute(String message, TraceCallback<T> callback){
+    public <T>T execute(String message, TraceCallback<T> callback){
         TraceStatus status = null;
 
         try{
