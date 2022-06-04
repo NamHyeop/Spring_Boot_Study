@@ -49,7 +49,13 @@ class freeBoardRepositoryTest {
         Text save2Text = freeBoardRepository.save(text2);
         //then
         List<Text> allText = freeBoardRepository.findAll();
-        assertThat(allText.size()).isEqualTo(2);
+        for (Text text : allText) {
+            System.out.println("text = " + text);
+        }
+        /**
+         * 기본 postconstruct 값이 2개 있으므로 총 4개가 되어야한다.
+         */
+        assertThat(allText.size()).isEqualTo(4);
         assertThat(allText).contains(save1Text, save2Text);
     }
 

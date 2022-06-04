@@ -1,6 +1,6 @@
 package connected.communication.learning;
 
-import connected.communication.controller.response.Response;
+import connected.communication.dto.response.Response;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

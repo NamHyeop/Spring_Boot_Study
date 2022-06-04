@@ -1,4 +1,9 @@
-package connected.communication.controller.response;
+package connected.communication.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AccessLevel;

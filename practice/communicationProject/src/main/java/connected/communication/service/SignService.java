@@ -8,6 +8,7 @@ import connected.communication.dto.sign.SignInRequest;
 import connected.communication.entity.member.Member;
 import connected.communication.entity.member.RoleType;
 import connected.communication.exception.LoginFailureException;
+import connected.communication.exception.MemberNotFoundException;
 import connected.communication.exception.RoleNotFoundException;
 import connected.communication.repository.member.MemberRepository;
 import connected.communication.repository.role.RoleRepository;
@@ -16,7 +17,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 
 @Service
 @RequiredArgsConstructor
@@ -27,11 +27,11 @@ public class SignService {
     private final PasswordEncoder passwordEncoder;
     private final TokenService tokenService;
     /**
-     * 회우 등록 로직
+     * 회원 등록 로직
      */
     @Transactional
     public void signUp(SignUpRequest req){
-        validateSignupInfo(req);
+        validateSignUpInfo(req);
         memberRepository.save(SignUpRequest.toEntity(req
                 ,roleRepository.findByRoleType(RoleType.ROLE_NORMAL).orElseThrow(RoleNotFoundException::new)
                 ,passwordEncoder));
@@ -58,7 +58,7 @@ public class SignService {
             throw new LoginFailureException();
     }
 
-    private void validateSignupInfo(SignUpRequest req) {
+    private void validateSignUpInfo(SignUpRequest req) {
         /*
          * 메일이 이미 존재한다면 예외처리
          */

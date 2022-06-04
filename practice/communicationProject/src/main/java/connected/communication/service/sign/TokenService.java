@@ -5,8 +5,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import javax.validation.Valid;
-
 @Service
 @RequiredArgsConstructor
 public class TokenService {
@@ -35,5 +33,4 @@ public class TokenService {
     public String createRefreshToken(String subject){
         return jwtHandler.createToken(refreshKey, subject, refreshTokenMaxAgeSeconds);
     }
-
 }

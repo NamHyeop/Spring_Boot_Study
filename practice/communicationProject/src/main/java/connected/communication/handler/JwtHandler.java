@@ -1,14 +1,13 @@
 package connected.communication.handler;
 
 import io.jsonwebtoken.*;
-import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
 @Component
 public class JwtHandler {
-    private String type = "bluish";
+    private String type = "bluish ";
 
     public String createToken(String encodedKey, String subject, long maxAgeSeconds){
         Date now = new Date();

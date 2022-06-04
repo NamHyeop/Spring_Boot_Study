@@ -77,16 +77,17 @@ class SignControllerTest {
         verify(signService).signIn(req);
     }
 
-    @Test
-    void ignoreNullValueInJsonResponseTest() throws Exception{
-        //given
-        SignUpRequest req = new SignUpRequest("email@google.com", "asd123456", "username", "nickName");
-        //when, then
 
+    @Test
+    void ignoreNullValueInJsonResponseTest() throws Exception {
+        // given
+        SignUpRequest req = new SignUpRequest("email@email.com", "123456a!", "username", "nickname");
+
+        // when, then
         mockMvc.perform(
-                post("/api/sign-up")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(req)))
+                        post("/api/sign-up")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(objectMapper.writeValueAsString(req)))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.result").doesNotExist());
     }

@@ -103,6 +103,15 @@ class SignServiceTest {
     }
 
     @Test
+    void signInExceptionByNoneMe1mberTest() {
+        // given
+        given(memberRepository.findByEmail(any())).willReturn(Optional.empty());
+
+        // when, then
+        assertThatThrownBy(() -> signService.signIn(new SignInRequest("email", "password"))).isInstanceOf(LoginFailureException.class);
+    }
+
+    @Test
     public void signInExceptionByInvalidPasswordTest() throws Exception{
         //given
         given(memberRepository.findByEmail(any())).willReturn(Optional.of(createMember()));

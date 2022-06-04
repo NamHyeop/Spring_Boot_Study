@@ -1,19 +1,17 @@
 package connected.communication.controller.sign;
 
-import connected.communication.controller.response.Response;
+import connected.communication.dto.response.Response;
 import connected.communication.dto.sign.SignInRequest;
 import connected.communication.dto.sign.SignUpRequest;
 import connected.communication.service.SignService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-import static connected.communication.controller.response.Response.success;
+import static connected.communication.dto.response.Response.success;
+
 
 @RestController
 @RequiredArgsConstructor

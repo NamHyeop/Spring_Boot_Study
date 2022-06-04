@@ -1,4 +1,4 @@
-package connected.communication.controller.response;
+package connected.communication.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
