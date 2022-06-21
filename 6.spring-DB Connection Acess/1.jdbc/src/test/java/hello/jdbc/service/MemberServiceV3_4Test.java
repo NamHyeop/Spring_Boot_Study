@@ -3,7 +3,6 @@ package hello.jdbc.service;
 import hello.jdbc.domain.Member;
 import hello.jdbc.repository.MemberRepositoryV3;
 import lombok.extern.slf4j.Slf4j;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,16 +19,15 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 
 import static hello.jdbc.connection.ConnectionConst.*;
-import static org.assertj.core.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 /**
- * 트랜잭션 - @Transaction AOP
+ * 트랜잭션 - Spring Boot를 활용한 DataSource, transactionManager 자동 빈 등록
  */
 @Slf4j
 @SpringBootTest
-class MemberServiceV3_3Test {
+class MemberServiceV3_4Test {
     @Autowired
     private MemberRepositoryV3 memberRepository;
     @Autowired
@@ -37,29 +35,15 @@ class MemberServiceV3_3Test {
 
     @TestConfiguration
     static class TestConfig{
-        /**
-         * 스프링에서 사용할 기본 DataSource를 스프링 빈에 추가한다.
-         * 추가로 트랜잭션 매니저에서 사용한다.
-         * 현재 코드는 JDBC 기술을 사용하고 있다.
-         */
-        @Bean
-        DataSource dataSource(){
-            return new DriverManagerDataSource(URL, USERNAME, PASSWORD);
-        }
+        private final DataSource dataSource;
 
-        /**
-         * 트랜잭션 매니저를 스프링 빈으로 등록함
-         * 스프링이 제공하는 트랜잭션 AOP는 스프링 빈에 등록된 트랜잭션 매니저를 찾는다.
-         * 테스트에서는 스프링 빈에 등록이 안되어있기 대문에 트랜잭션 매니저를 따로 스프링 빈에 추가해줘야한다.
-         */
-        @Bean
-        PlatformTransactionManager transactionManager(){
-            return new DataSourceTransactionManager(dataSource());
+        public TestConfig(DataSource dataSource) {
+            this.dataSource = dataSource;
         }
 
         @Bean
         MemberRepositoryV3 memberRepositoryV3(){
-            return new MemberRepositoryV3(dataSource());
+            return new MemberRepositoryV3(dataSource);
         }
 
         @Bean

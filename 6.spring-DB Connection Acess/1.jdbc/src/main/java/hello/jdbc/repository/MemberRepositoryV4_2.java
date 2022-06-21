@@ -5,23 +5,24 @@ import hello.jdbc.repository.ex.MyDbException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.datasource.DataSourceUtils;
 import org.springframework.jdbc.support.JdbcUtils;
+import org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator;
+import org.springframework.jdbc.support.SQLExceptionTranslator;
 
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.NoSuchElementException;
 
 /**
- * V3에서 발생했떤 예외 누수 문제를 해결
- * V3의 문제였던 체크 예외를 런타임 예외로 변경
- * MemberRepository 인터페이스 사용
- * 이를 통해 SQLEXception 제거가 가능해짐
+ * SQLExceptionTranslator 추가
  */
 @Slf4j
-public class MemberRepositoryV4_1 implements MemberRepository{
+public class MemberRepositoryV4_2 implements MemberRepository{
     private final DataSource dataSource;
+    private final SQLExceptionTranslator exTranslator;
 
-    public MemberRepositoryV4_1(DataSource dataSource) {
+    public MemberRepositoryV4_2(DataSource dataSource) {
         this.dataSource = dataSource;
+        this.exTranslator = new SQLErrorCodeSQLExceptionTranslator(dataSource);
     }
 
     @Override
@@ -50,7 +51,7 @@ public class MemberRepositoryV4_1 implements MemberRepository{
             return member;
         } catch (SQLException e) {
             log.error("db error", e);
-            throw new MyDbException(e);
+            throw exTranslator.translate("save Function", sql, e);
         }finally {
             /**
              * connection, preparestatement, resultSet 순으로 열어줬기 때문에 닫을때는 반대로
@@ -87,7 +88,7 @@ public class MemberRepositoryV4_1 implements MemberRepository{
             }
         }catch (SQLException e){
             log.error("db error", e);
-            throw new MyDbException(e);
+            throw exTranslator.translate("findById Function", sql, e);
         }finally {
             close(con, pstmt, rs);
         }
@@ -109,7 +110,7 @@ public class MemberRepositoryV4_1 implements MemberRepository{
             log.info("resultSize={}", retSize);
         } catch (SQLException e) {
             log.error("db error", e);
-            throw new MyDbException(e);
+            throw exTranslator.translate("update Function", sql, e);
         }finally {
            close(con, pstmt, null);
         }
@@ -130,7 +131,7 @@ public class MemberRepositoryV4_1 implements MemberRepository{
             log.info("resultSize={}", retSize);
         } catch (SQLException e) {
             log.error("db error", e);
-            throw new MyDbException(e);
+            throw exTranslator.translate("delete Function", sql, e);
         }finally {
             close(con, pstmt, null);
         }

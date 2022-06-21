@@ -2,6 +2,7 @@ package hello.jdbc.repository;
 
 import hello.jdbc.domain.Member;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.jdbc.datasource.DataSourceUtils;
 import org.springframework.jdbc.support.JdbcUtils;
 
 import javax.sql.DataSource;
@@ -9,14 +10,15 @@ import java.sql.*;
 import java.util.NoSuchElementException;
 
 /**
- * Transaction의 같은 커넥션을 유지하기 위한 Repository 구현
- * Connection을 매개변수로 넘겨주는 방식이다.
+ * 트랜잭션 매니저
+ * DataSourceUtils.getConnection()
+ * DataSourceUtils.releaseConnection();
  */
 @Slf4j
-public class MemberRepositoryV2 {
+public class MemberRepositoryV3 {
     private final DataSource dataSource;
 
-    public MemberRepositoryV2(DataSource dataSource) {
+    public MemberRepositoryV3(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
@@ -87,40 +89,6 @@ public class MemberRepositoryV2 {
         }
     }
 
-    public Member findById(Connection con, String memberId) throws SQLException{
-        String sql = "select * from member where member_id = ?";
-
-        PreparedStatement pstmt = null;
-        ResultSet rs = null;
-
-        try{
-            pstmt = con.prepareStatement(sql);
-            pstmt.setString(1,memberId);
-            /**
-             * 데이터를 조회할때는 executeQuery, 업데이트할 때는 executeUpdate
-             */
-            rs = pstmt.executeQuery();
-
-            if(rs.next()){
-                Member member = new Member();
-                member.setMemberId(rs.getString("member_id"));
-                member.setMoney(rs.getInt("money"));
-                return member;
-            }else{
-                throw new NoSuchElementException("member not found memberId=" + memberId);
-            }
-        }catch (SQLException e){
-            log.error("db error", e);
-            throw e;
-        }finally {
-            /**
-             * Connection은 Service 계층에서 닫아줘야한다.
-             */
-            JdbcUtils.closeResultSet(rs);
-            JdbcUtils.closeStatement(pstmt);
-        }
-    }
-
     public void update(String memberId, int money) throws SQLException {
         String sql = "update member set money=? where member_id=?";
 
@@ -139,28 +107,6 @@ public class MemberRepositoryV2 {
             throw e;
         }finally {
            close(con, pstmt, null);
-        }
-    }
-
-    public void update(Connection con, String memberId, int money) throws SQLException {
-        String sql = "update member set money=? where member_id=?";
-
-        PreparedStatement pstmt = null;
-
-        try{
-            pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, money);
-            pstmt.setString(2, memberId);
-            int retSize = pstmt.executeUpdate();
-            log.info("resultSize={}", retSize);
-        } catch (SQLException e) {
-            log.error("db error", e);
-            throw e;
-        }finally {
-            /**
-             * Connection은 Service 계층에서 닫아줘야한다.
-             */
-            JdbcUtils.closeStatement(pstmt);
         }
     }
 
@@ -187,11 +133,16 @@ public class MemberRepositoryV2 {
     private void close(Connection con, Statement pstmt, ResultSet rs){
         JdbcUtils.closeResultSet(rs);
         JdbcUtils.closeStatement(pstmt);
-        JdbcUtils.closeConnection(con);
+        /**
+         * Transaction 동기화 사용을 위해서는 DataSourceUtils를 사용해야한다.
+         * 트랜잭션을 사용하기 위해 동기화된 커넥션은 커넥션을 닫지 않고 그대로 유지해준다.
+         * 트랜잭션 동기화 매니저가 관리하는 커넥션이 없는 경우 해당 커넥션을 닫는다.
+         */
+        DataSourceUtils.releaseConnection(con, dataSource);
     }
 
     private Connection getConnection() throws SQLException {
-        Connection con = dataSource.getConnection();
+        Connection con = DataSourceUtils.getConnection(dataSource);
         log.info("get connection={}, class={}", con, con.getClass());
         return con;
     }

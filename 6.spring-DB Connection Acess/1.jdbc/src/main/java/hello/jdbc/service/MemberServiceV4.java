@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Slf4j
 @RequiredArgsConstructor
-public class MemberServiceV4_1 {
+public class MemberServiceV4 {
     private final MemberRepository memberRepository;
 
     @Transactional
