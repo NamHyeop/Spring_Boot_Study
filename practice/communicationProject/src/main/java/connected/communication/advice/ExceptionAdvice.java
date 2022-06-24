@@ -3,9 +3,7 @@ package connected.communication.advice;//package connected.communication.advice;
 import connected.communication.dto.MemberEmailAlreadyExistsException;
 import connected.communication.dto.MemberNicknameAlreadyExistsException;
 import connected.communication.dto.response.Response;
-import connected.communication.exception.LoginFailureException;
-import connected.communication.exception.MemberNotFoundException;
-import connected.communication.exception.RoleNotFoundException;
+import connected.communication.exception.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -27,6 +25,24 @@ public class ExceptionAdvice {
     public Response exception(Exception e){
         log.info("e = {}", e.getMessage());
         return Response.failure(-1000,"오류가 발생하였습니다.");
+    }
+
+    /**
+     * 인가되지 않은 사용자가 접근할 경우 응답 401번 응답
+     */
+    @ExceptionHandler(AuthenticationEntryPointException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    public Response authenticationEntryPoint(){
+        return Response.failure(-1001, "인증되지 않은 사용자입니다.");
+    }
+
+    /**
+     * 인가되지 않은 사용자가 접근할 경우 응답 401번 응답
+     */
+    @ExceptionHandler(AccessDeniedException.class)
+    @ResponseStatus(HttpStatus.FORBIDDEN)
+    public Response accessDeniedException(){
+        return Response.failure(-1002, "접근이 거부 되었습니다.");
     }
 
     /**
