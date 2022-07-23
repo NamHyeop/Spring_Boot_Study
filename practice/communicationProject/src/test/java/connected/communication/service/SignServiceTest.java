@@ -1,13 +1,16 @@
 package connected.communication.service;
 
+import com.fasterxml.jackson.databind.annotation.JsonTypeResolver;
 import connected.communication.dto.MemberEmailAlreadyExistsException;
 import connected.communication.dto.MemberNicknameAlreadyExistsException;
+import connected.communication.dto.sign.RefreshTokenResponse;
 import connected.communication.dto.sign.SignInRequest;
 import connected.communication.dto.sign.SignInResponse;
 import connected.communication.dto.sign.SignUpRequest;
 import connected.communication.entity.member.Member;
 import connected.communication.entity.member.Role;
 import connected.communication.entity.member.RoleType;
+import connected.communication.exception.AuthenticationEntryPointException;
 import connected.communication.exception.LoginFailureException;
 import connected.communication.exception.RoleNotFoundException;
 import connected.communication.repository.member.MemberRepository;
@@ -120,6 +123,31 @@ class SignServiceTest {
         //then
         assertThatThrownBy(() -> signService.signIn(new SignInRequest("email","password"))).isInstanceOf(LoginFailureException.class);
     }
+
+    @Test
+    public void refreshTokenTest() throws Exception{
+        //given
+        String refreshToken="refreshToken";
+        String subject = "subject";
+        String accessToken="accessToken";
+        given(tokenService.validateRefreshToken(refreshToken)).willReturn(true);
+        given(tokenService.extractRefreshTokenSubject(refreshToken)).willReturn(subject);
+        given(tokenService.createAccessToken(subject)).willReturn(accessToken);
+        //when
+        RefreshTokenResponse res = signService.refreshToken(refreshToken);
+        //then
+        assertThat(res.getAccessToken()).isEqualTo(accessToken);
+    }
+
+    @Test
+    void refreshTokenExceptionByInvalidTokenTest(){
+        //given
+        String refreshToken="refreshToken";
+        given(tokenService.validateRefreshToken(refreshToken)).willReturn(false);
+        //when//then
+        assertThatThrownBy(()->signService.refreshToken(refreshToken)).isInstanceOf(AuthenticationEntryPointException.class);
+    }
+
     private SignUpRequest createSignUprequest() {
         return new SignUpRequest("email", "password", "username", "nickname");
     }

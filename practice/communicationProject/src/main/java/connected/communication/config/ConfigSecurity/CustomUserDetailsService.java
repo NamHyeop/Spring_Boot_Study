@@ -28,7 +28,7 @@ public class CustomUserDetailsService implements UserDetailsService {
                 .orElseGet(() -> new Member(null, null, null, null, List.of()));
         /**
          * 가입된 유저 정보 기반으로 권한을 부여한다. CustomUserDetails 권한등급을 GrandedAuthrity 인터페이스 타입으로 받게 된다.
-         * ㅇGrandtedAuthrity의 구현체인 SimpleCrantedAuthority를 사용하였다.
+         * GrandtedAuthrity의 구현체인 SimpleCrantedAuthority를 사용하였다.
          */
         return new CustomUserDetails(
                 String.valueOf(member.getId()),

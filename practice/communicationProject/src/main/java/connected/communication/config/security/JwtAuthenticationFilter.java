@@ -1,19 +1,14 @@
 package connected.communication.config.security;
 
-import connected.communication.config.ConfigSecurity.CustomAuthenticationEntryPoint;
 import connected.communication.config.ConfigSecurity.CustomUserDetails;
 import connected.communication.config.ConfigSecurity.CustomUserDetailsService;
 import connected.communication.service.sign.TokenService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.filter.GenericFilterBean;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
@@ -30,9 +25,14 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
          * SpringSecurity가 관리해주는 컨텍스트에 사용자 정보(CustomAuthenticationToken)을 등록한다
          */
         String token = extractToken(request);
-        if(validateAccessToken(token)){
-            setAccessAuthentication("access", token);
-        }else if(tokenService.validateRefreshToken(token));
+        if(validateToken(token)){
+            setAuthentication(token);
+        }
+//        if(validateAccessToken(token)){
+//            setAccessAuthentication("access", token);
+//        }else if(validateRefreshToken(token)){
+//            setRefreshAuthentication("refresh",token);
+//        }
         chain.doFilter(request,response);
     }
 
@@ -40,23 +40,31 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
         return ((HttpServletRequest)request).getHeader("Authorization");
     }
 
-    private boolean validateAccessToken(String token){
+    private boolean validateToken(String token){
         return token != null && tokenService.validateAccessToken(token);
     }
 
-    private boolean validateRefreshToken(String token){
-        return token != null && tokenService.validateRefreshToken(token);
-    }
-
-    private void setAccessAuthentication(String type, String token){
+    private void setAuthentication(String token){
         String userId = tokenService.extractAccessTokenSubject(token);
         CustomUserDetails userDetails = userDetailsService.loadUserByUsername(userId);
-        SecurityContextHolder.getContext().setAuthentication(new CustomAuthenticationToken(userDetails.getAuthorities(), type, userDetails));
+        SecurityContextHolder.getContext().setAuthentication(new CustomAuthenticationToken(userDetails, userDetails.getAuthorities()));
     }
+    /**
+     * 엑세스 토큰이 유효할 때만 컨텍스트에 사용자 정보를 저장해주기 위해
+     * 아래 코드 로직 리팩토링
+     * 이를 위해 사용자 정보르 조회하는 작업을 제거함
+     */
+//    private boolean validateAccessToken(String token){
+//        return token != null && tokenService.validateAccessToken(token);
+//    }
+//
+//    private boolean validateRefreshToken(String token){
+//        return token != null && tokenService.validateRefreshToken(token);
+//    }
+//    private void setAccessAuthentication(String type, String token){
+//        String userId = tokenService.extractAccessTokenSubject(token);
+//        CustomUserDetails userDetails = userDetailsService.loadUserByUsername(userId);
+//        SecurityContextHolder.getContext().setAuthentication(new CustomAuthenticationToken(type, userDetails, userDetails.getAuthorities()));
+//    }
 
-    private void setRefreshAuthentication(String type, String token){
-        String userId = tokenService.extractRefreshTokenSubject(token);
-        CustomUserDetails userDetails = userDetailsService.loadUserByUsername(userId);
-        SecurityContextHolder.getContext().setAuthentication(new CustomAuthenticationToken(userDetails.getAuthorities(), type, userDetails));
-    }
 }

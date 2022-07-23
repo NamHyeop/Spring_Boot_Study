@@ -17,6 +17,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import static connected.communication.factory.dto.RefreshTokenResponseFactory.createRefreshTokenResponse;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
@@ -90,5 +91,18 @@ class SignControllerTest {
                                 .content(objectMapper.writeValueAsString(req)))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.result").doesNotExist());
+    }
+
+    @Test
+    public void refreshTokenTest() throws Exception{
+        //given
+        given(signService.refreshToken("refreshToken")).willReturn(createRefreshTokenResponse("accessToken"));
+        //when
+        //then
+        mockMvc.perform(
+                post("/api/refresh-token")
+                        .header("Authorization", "refreshToken"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.result.data.accessToken").value("accessToken"));
     }
 }

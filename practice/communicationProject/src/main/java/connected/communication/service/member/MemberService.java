@@ -5,6 +5,7 @@ import connected.communication.entity.member.Member;
 import connected.communication.exception.MemberNotFoundException;
 import connected.communication.repository.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -2,11 +2,13 @@ package connected.communication.service;
 
 import connected.communication.dto.MemberEmailAlreadyExistsException;
 import connected.communication.dto.MemberNicknameAlreadyExistsException;
+import connected.communication.dto.sign.RefreshTokenResponse;
 import connected.communication.dto.sign.SignInResponse;
 import connected.communication.dto.sign.SignUpRequest;
 import connected.communication.dto.sign.SignInRequest;
 import connected.communication.entity.member.Member;
 import connected.communication.entity.member.RoleType;
+import connected.communication.exception.AuthenticationEntryPointException;
 import connected.communication.exception.LoginFailureException;
 import connected.communication.exception.MemberNotFoundException;
 import connected.communication.exception.RoleNotFoundException;
@@ -40,6 +42,7 @@ public class SignService {
     /**
      * 회원 로그인 로직
      */
+    @Transactional(readOnly = true)
     public SignInResponse signIn(SignInRequest req){
         Member member = memberRepository.findByEmail(req.getEmail()).orElseThrow(LoginFailureException::new);
         validatePassword(req, member);
@@ -69,5 +72,18 @@ public class SignService {
          */
         if (memberRepository.existsByNickname(req.getNickname()))
             throw new MemberNicknameAlreadyExistsException(req.getNickname());
+    }
+
+    public RefreshTokenResponse refreshToken(String rToken){
+        validateRefreshToken(rToken);
+        String subject = tokenService.extractRefreshTokenSubject(rToken);
+        String accessToken = tokenService.createAccessToken(subject);
+        return new RefreshTokenResponse(accessToken);
+    }
+
+    private void validateRefreshToken(String rToken) {
+        if(!tokenService.validateRefreshToken(rToken)){
+            throw new AuthenticationEntryPointException();
+        }
     }
 }

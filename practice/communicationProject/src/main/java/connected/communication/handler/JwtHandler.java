@@ -3,8 +3,8 @@ package connected.communication.handler;
 import io.jsonwebtoken.*;
 import org.springframework.stereotype.Component;
 
+import javax.persistence.Entity;
 import java.util.Date;
-
 @Component
 public class JwtHandler {
     private String type = "bluish ";

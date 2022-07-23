@@ -9,6 +9,7 @@ import javax.validation.Validator;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static connected.communication.factory.dto.SignInRequestFactory.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class SignInRequestValidationTest {
@@ -20,7 +21,7 @@ class SignInRequestValidationTest {
     @Test
     public void validateTest() throws Exception{
         //given
-        SignInRequest req = createRequest();
+        SignInRequest req = createSignInRequest();
         //when
         /**
          * 검증 작업을 수행한다. 제약 조건을 위한한 내용이 있따면 Set<ConstratintViolation<SignRequest>>에 담기게 된다.
@@ -37,7 +38,7 @@ class SignInRequestValidationTest {
     public void invalidateByNotFormattedEmailTest() throws Exception{
         //given
         String invalidValue = "email";
-        SignInRequest req = createRequestWithEmail(invalidValue);
+        SignInRequest req = createSignInRequestWithEmail(invalidValue);
         //when
         Set<ConstraintViolation<SignInRequest>> validate = validator.validate(req);
         //then
@@ -55,7 +56,7 @@ class SignInRequestValidationTest {
     public void invalidateByEmptyEmailTest() throws Exception{
         //given
         String invalidValue = null;
-        SignInRequest req = createRequestWithEmail(invalidValue);
+        SignInRequest req = createSignInRequestWithEmail(invalidValue);
         //when
         Set<ConstraintViolation<SignInRequest>> validate = validator.validate(req);
         //then
@@ -67,7 +68,7 @@ class SignInRequestValidationTest {
     public void invalidateByEmptyPasswordTest() throws Exception{
         //given
         String invalidValue = null;
-        SignInRequest req = createRequestWithPassword(invalidValue);
+        SignInRequest req = createSignInRequestWithEmail(invalidValue);
         //when
         Set<ConstraintViolation<SignInRequest>> validate = validator.validate(req);
         //then
@@ -79,7 +80,7 @@ class SignInRequestValidationTest {
     public void invalidateByBlankPasswordTest() throws Exception{
         //given
         String invalidValue = "";
-        SignInRequest req = createRequestWithPassword(invalidValue);
+        SignInRequest req = createSignInRequestWithPassword(invalidValue);
         //when
         Set<ConstraintViolation<SignInRequest>> validate = validator.validate(req);
         //then
@@ -88,21 +89,24 @@ class SignInRequestValidationTest {
     }
 
     /**
-     * 정상적인 요청 객체를 생성하는 팩토리 메소드.
+     * factory 패턴으로 리팩토리하여 코드가 필요없어짐
      */
-    private SignInRequest createRequest(){
-        return new SignInRequest("email@google.com", "!asd123456");
-    }
-    /**
-     * 전달 받은 email 필드 외에는 정상적인 요청 객체를 생성하는 팩토리 메소드.
-     */
-    private SignInRequest createRequestWithEmail(String email){
-        return new SignInRequest(email, "!asd123456!");
-    }
-    /**
-     * 전달 받은 password 필드 외에는 정상적인 요청 객체를 생성하는 팩토리 메소드.
-     */
-    private SignInRequest createRequestWithPassword(String password){
-        return new SignInRequest("email@google.com", password);
-    }
+//    /**
+//     * 정상적인 요청 객체를 생성하는 팩토리 메소드.
+//     */
+//    private SignInRequest createRequest(){
+//        return new SignInRequest("email@google.com", "!asd123456");
+//    }
+//    /**
+//     * 전달 받은 email 필드 외에는 정상적인 요청 객체를 생성하는 팩토리 메소드.
+//     */
+//    private SignInRequest createRequestWithEmail(String email){
+//        return new SignInRequest(email, "!asd123456!");
+//    }
+//    /**
+//     * 전달 받은 password 필드 외에는 정상적인 요청 객체를 생성하는 팩토리 메소드.
+//     */
+//    private SignInRequest createRequestWithPassword(String password){
+//        return new SignInRequest("email@google.com", password);
+//    }
 }

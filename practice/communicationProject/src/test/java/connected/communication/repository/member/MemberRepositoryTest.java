@@ -5,6 +5,7 @@ import connected.communication.entity.member.MemberRole;
 import connected.communication.entity.member.Role;
 import connected.communication.entity.member.RoleType;
 import connected.communication.exception.MemberNotFoundException;
+import connected.communication.factory.entity.MemberFactory;
 import connected.communication.repository.role.RoleRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -34,7 +35,7 @@ class MemberRepositoryTest {
     @Test
     public void createAndReadTest() throws Exception{
         //given
-        Member member = createMember();
+        Member member = MemberFactory.createMember();
         //when
         memberRepository.save(member);
         clear();
@@ -46,7 +47,7 @@ class MemberRepositoryTest {
     @Test
     public void memberDateTest() throws Exception{
         //given
-        Member member = createMember();
+        Member member = MemberFactory.createMember();
         //when
         memberRepository.save(member);
         clear();
@@ -61,7 +62,7 @@ class MemberRepositoryTest {
    public void updateTest() throws Exception{
        //given
        String updatedNickname = "updated";
-       Member member = memberRepository.save(createMember());
+       Member member = memberRepository.save(MemberFactory.createMember());
        clear();
        //when
        Member foundMember = memberRepository.findById(member.getId()).orElseThrow(MemberNotFoundException::new);
@@ -75,7 +76,7 @@ class MemberRepositoryTest {
    @Test
    public void deleteTest() throws Exception{
        //given
-       Member member = memberRepository.save(createMember());
+       Member member = memberRepository.save(MemberFactory.createMember());
        clear();
        //when
        memberRepository.delete(member);
@@ -87,7 +88,7 @@ class MemberRepositoryTest {
    @Test
    public void findByEmailTest() throws Exception{
        //given
-       Member member = memberRepository.save(createMember());
+       Member member = memberRepository.save(MemberFactory.createMember());
        clear();
        //when
        Member foundMember = memberRepository.findByEmail(member.getEmail()).orElseThrow(MemberNotFoundException::new);
@@ -98,30 +99,30 @@ class MemberRepositoryTest {
    @Test
    public void uniqueEmailTest() throws Exception{
        //given
-       Member member = memberRepository.save(createMember("email1", "password1", "username1", "nickname1"));
+       Member member = memberRepository.save(MemberFactory.createMember("email1", "password1", "username1", "nickname1"));
        clear();
        //when
 
        //then
-       assertThatThrownBy(()->memberRepository.save(createMember(member.getEmail(), "password2", "username2", "nickname2")))
+       assertThatThrownBy(()->memberRepository.save(MemberFactory.createMember(member.getEmail(), "password2", "username2", "nickname2")))
                .isInstanceOf(DataIntegrityViolationException.class);
    }
 
     @Test
     public void uniqueNicknameTest() throws Exception{
         //given
-        Member member = memberRepository.save(createMember("email1", "password1", "username1", "nickname1"));
+        Member member = memberRepository.save(MemberFactory.createMember("email1", "password1", "username1", "nickname1"));
         clear();
         //when
         //then
-        assertThatThrownBy(()-> memberRepository.save(createMember("email1", "password1", "username1", member.getNickname())))
+        assertThatThrownBy(()-> memberRepository.save(MemberFactory.createMember("email1", "password1", "username1", member.getNickname())))
                 .isInstanceOf(DataIntegrityViolationException.class);
     }
 
     @Test
     public void existsByEmailTest() throws Exception{
         //given
-        Member member = memberRepository.save(createMember());
+        Member member = memberRepository.save(MemberFactory.createMember());
         clear();
         //when
         //then
@@ -132,7 +133,7 @@ class MemberRepositoryTest {
     @Test
     public void existsByNicknameTest() throws Exception{
         //given
-        Member member = memberRepository.save(createMember());
+        Member member = memberRepository.save(MemberFactory.createMember());
         clear();
         //when
         //then
@@ -148,7 +149,7 @@ class MemberRepositoryTest {
         roleRepository.saveAll(roles);
         clear();
 
-        Member member = memberRepository.save(createMemberWithRoles(roleRepository.findAll()));
+        Member member = memberRepository.save(MemberFactory.createMember(roleRepository.findAll()));
         clear();
 
         //when
@@ -166,7 +167,7 @@ class MemberRepositoryTest {
         roleRepository.saveAll(roles);
         clear();
 
-        Member member = memberRepository.save(createMemberWithRoles(roleRepository.findAll()));
+        Member member = memberRepository.save(MemberFactory.createMember(roleRepository.findAll()));
         clear();
         //when
         memberRepository.deleteById(member.getId());
@@ -180,14 +181,16 @@ class MemberRepositoryTest {
         em.flush();
         em.clear();
     }
-
-    private Member createMemberWithRoles(List<Role> roles) {
-        return new Member("email", "password", "username", "nickname", roles);
-    }
-    private Member createMember(String email, String password, String username, String nickname){
-        return new Member(email, password, username, nickname, emptyList());
-    }
-    private Member createMember(){
-        return new Member("email", "password", "username", "nickname", emptyList());
-    }
+/**
+ * Factor 패턴으로 리팩토리
+ */
+//    private Member createMemberWithRoles(List<Role> roles) {
+//        return new Member("email", "password", "username", "nickname", roles);
+//    }
+//    private Member createMember(String email, String password, String username, String nickname){
+//        return new Member(email, password, username, nickname, emptyList());
+//    }
+//    private Member createMember(){
+//        return new Member("email", "password", "username", "nickname", emptyList());
+//    }
 }
