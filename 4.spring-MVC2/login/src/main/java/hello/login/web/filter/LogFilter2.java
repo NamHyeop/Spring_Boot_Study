@@ -8,16 +8,16 @@ import java.io.IOException;
 import java.util.UUID;
 
 @Slf4j
-public class LogFilter implements Filter {
+public class LogFilter2 implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        log.info("log filter init");
+        log.info("log filter init-2");
     }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        log.info("log filter doFilter-0");
+        log.info("log filter doFilter2");
         //ServletRequest는 HttpServletRequest의 부모인데 ServletRequest의 기능은 너무 적기 때문에 HttpServletRequest로 캐스팅 해줘야한다.
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         String requestURI = httpRequest.getRequestURI();
@@ -26,20 +26,20 @@ public class LogFilter implements Filter {
         String uuid = UUID.randomUUID().toString();
 
         try{
-            log.info("REQUEST-0 [{}][{}]", uuid, requestURI);
+            log.info("REQUEST-2[{}][{}]", uuid, requestURI);
             //chain은 filter과정이 더 남아있으면 더 남은 과정으로 이동하고 아닐경우 servlet과정을 진행한다. 현재 스프링을 사용하므로 정확히는 DispatchServlet으로 넘어가서 mapping과정을 진행한다.
             chain.doFilter(request, response);
         }catch (Exception e){
             throw  e;
         }
         finally {
-            log.info("RESPONSE-0 [{}][{}]", uuid, requestURI);
+            log.info("RESPONSE2 [{}][{}]", uuid, requestURI);
         }
-        log.info("Survie Response-0! [{}][{}]", uuid, requestURI);
+        log.info("Survie Response-2! [{}][{}]", uuid, requestURI);
     }
 
     @Override
     public void destroy() {
-        System.out.println("log filter destroy-0");
+        System.out.println("log filter destroy-2");
     }
 }

@@ -12,6 +12,6 @@
 <%--  이런것도 가능함, 그러나 더 불편--%>
 <%--  <li<%=((member)request.getAttribute("member")).getAge()%></li>--%>
 </ul>
-<a href="/index.html">메인</a>
+<a href="/index.jsp">메인</a>
 </body>
 </html>

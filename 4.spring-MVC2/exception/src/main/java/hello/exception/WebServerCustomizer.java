@@ -6,6 +6,10 @@ import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
+/**
+ * WebServerFactoryCustomizer를 사용하게 되면 Spring의 기본 옵션인 BasciErrorController에서 처리하는 옵션대로 진행이 안된다.
+ * 에러 경로를 커스터 마이징하고 싶을때 사용하자
+ */
 //@Component
 //errorPage를 등록하는 과정
 public class WebServerCustomizer implements WebServerFactoryCustomizer<ConfigurableWebServerFactory> {

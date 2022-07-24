@@ -2,6 +2,7 @@ package hello.itemservice.web.basic;
 
 import hello.itemservice.domain.item.Item;
 import hello.itemservice.domain.item.ItemRepository;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -10,11 +11,13 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.PostConstruct;
+import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @Controller
-@RequestMapping("/basic/items")
+//@RequestMapping("/basic/items")
 @RequiredArgsConstructor
 public class BasicItemController {
     private final ItemRepository itemRepository;
@@ -141,5 +144,47 @@ public class BasicItemController {
     public void init(){
         itemRepository.save(new Item("itemA", 10000, 10));
         itemRepository.save(new Item("itemB", 20000, 20));
+    }
+
+//    @ResponseBody
+//    @PostMapping("/orderpro123")
+//    public void test(@RequestBody TestDto testDto){
+//        System.out.println("testDto = " + testDto);
+//        List<Long> numbers = testDto.getNumbers();
+//        for (Long number : numbers) {
+//            System.out.println("number = " + number);
+//        }
+//    }
+
+    @ResponseBody
+    @GetMapping("/orderpro124")
+    public void test2(@RequestBody Map<String, List<String>> testDto){
+        System.out.println("testDto = " + testDto);
+        List<String> id = testDto.get("id");
+        List<String> password = testDto.get("password");
+        List<String> strings = testDto.get("email");
+        for (String string : strings) {
+            System.out.println("string = " + string);
+        }
+//        List<String> numbers = testDto.getNumbers();
+//        for (Object o : numbers) {
+//            System.out.println("o = " + o);
+//        }
+    }
+
+    @ResponseBody
+    @GetMapping("/orderpro125")
+    public void test2(@RequestParam TestDto testDto){
+        System.out.println("testDto = " + testDto);
+    }
+
+    @Data
+    static class TestDto implements Serializable {
+        String numbers;
+    }
+
+    @Data
+    static class TestDto2{
+        String abc;
     }
 }

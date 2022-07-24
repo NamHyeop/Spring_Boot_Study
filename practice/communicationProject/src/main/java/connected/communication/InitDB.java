@@ -42,7 +42,8 @@ public class InitDB {
     public void initDB(){
         log.info("initialize database");
         initRole();
-
+        initTestAdmin();
+        initTestMember();
     }
 
     private void initRole(){

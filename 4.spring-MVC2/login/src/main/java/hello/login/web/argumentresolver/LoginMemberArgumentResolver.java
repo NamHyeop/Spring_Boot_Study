@@ -16,7 +16,6 @@ import javax.servlet.http.HttpSession;
 public class LoginMemberArgumentResolver implements HandlerMethodArgumentResolver {
 
     //내부에 캐쉬가 있어서 최초 1회만 실행된다.
-    @Override
     public boolean supportsParameter(MethodParameter parameter) {
         log.info("supportsParameter 실행");
         //Login 어노테이션이 붙어 있는지 확인

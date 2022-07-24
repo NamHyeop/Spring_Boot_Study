@@ -18,25 +18,54 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class ExceptionControllerAdviceTest {
     @InjectMocks ExceptionController exceptionController;
     MockMvc mockMvc;
-    
+
     @BeforeEach
-    void beforeEach(){
+    void beforeEach() {
         mockMvc = MockMvcBuilders.standaloneSetup(exceptionController).setControllerAdvice(new ExceptionAdvice()).build();
     }
 
     @Test
-    public void entryPointTes1t() throws Exception{
-        //given//when//then
-        mockMvc.perform(get("/exception/entry-point"))
+    void entryPointTest() throws Exception{
+        // given, when, then
+        mockMvc.perform(
+                        get("/exception/entry-point"))
                 .andExpect(status().isUnauthorized())
                 .andExpect(jsonPath("$.code").value(-1001));
     }
 
     @Test
-    public void accessDeniedTest() throws Exception{
-        //given//when//then
-        mockMvc.perform(get("/exception/access-denied"))
+    void accessDeniedTest() throws Exception {
+        // given, when, then
+        mockMvc.perform(
+                        get("/exception/access-denied"))
                 .andExpect(status().isForbidden())
                 .andExpect(jsonPath("$.code").value(-1002));
     }
+
 }
+//@ExtendWith(MockitoExtension.class)
+//class ExceptionControllerAdviceTest {
+//    @InjectMocks ExceptionController exceptionController;
+//    MockMvc mockMvc;
+//
+//    @BeforeEach
+//    void beforeEach(){
+//        mockMvc = MockMvcBuilders.standaloneSetup(exceptionController).setControllerAdvice(new ExceptionAdvice()).build();
+//    }
+//
+//    @Test
+//    public void entryPointTes1t() throws Exception{
+//        //given//when//then
+//        mockMvc.perform(get("/exception/entry-point"))
+//                .andExpect(status().isUnauthorized())
+//                .andExpect(jsonPath("$.code").value(-1001));
+//    }
+//
+//    @Test
+//    public void accessDeniedTest() throws Exception{
+//        //given//when//then
+//        mockMvc.perform(get("/exception/access-denied"))
+//                .andExpect(status().isForbidden())
+//                .andExpect(jsonPath("$.code").value(-1002));
+//    }
+//}
