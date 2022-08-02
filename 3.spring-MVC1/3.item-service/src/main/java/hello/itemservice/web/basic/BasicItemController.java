@@ -17,7 +17,7 @@ import java.util.Map;
 
 @Slf4j
 @Controller
-//@RequestMapping("/basic/items")
+@RequestMapping("/basic/items")
 @RequiredArgsConstructor
 public class BasicItemController {
     private final ItemRepository itemRepository;

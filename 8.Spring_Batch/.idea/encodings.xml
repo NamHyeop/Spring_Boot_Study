@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/SpringBatch_3_1_9_JobRepository/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_3_1_9_JobRepository/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBatch_4_1_BatchInitConfigration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_5_2_Step_TaskletStepConceptAndAPI/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_5_2_Step_TaskletStepConceptAndAPI/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_5_3_Step_TaskletStepTasklet/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_5_3_Step_TaskletStepTasklet/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_5_4_Step_startLimitAndAllowStartIfComplte/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_5_4_Step_startLimitAndAllowStartIfComplte/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_5_5_Step_TaskletStepArchitectureConfiguration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_5_6_Step_JobStep/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_5_6_Step_JobStep/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_1_FlowJobConcept/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_1_FlowJobConcept/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_2_FlowJob/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_3_Transition/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_4_CustomExitStatus/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_5_JobExecutionDecider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_6_FlowJob/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_7_SimpleFlow/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_8_SimpleFlowExample/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_9_SimpleFlowArchitecture/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_9_SimpleFlowArchitecture/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sibalgaesaeki/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sibalgaesaeki/src/main/resources" charset="UTF-8" />
   </component>
 </project>

@@ -7,13 +7,67 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SpringBatch_4_1_BatchInitConfiguration (2)" />
+        <module name="SpringBatch_4_1_BatchInitConfiguration (1)" />
+        <module name="SpringBatch_6_2_FlowJob (1)" />
+        <module name="SpringBatch_4_1_BatchInitConfiguration (4)" />
+        <module name="SpringBatch_4_1_BatchInitConfiguration (3)" />
+        <module name="SpringBatch_6_2_FlowJob" />
+        <module name="SpringBatch_4_1_BatchInitConfiguration (5)" />
+        <module name="SpringBatch_6_1_FlowJobConcept" />
         <module name="SpringBatch_4_1_BatchInitConfiguration" />
+        <module name="SpringBatch_6_5_JobExecutionDecider" />
+        <module name="SpringBatch_6_4_CustomExitStatus" />
+        <module name="SpringBatch_6_7_SimpleFlow" />
+        <module name="SpringBatch_6_8_SimpleFlowExample" />
+        <module name="SpringBatch_6_9_SimpleFlowArchitecture" />
+        <module name="spring-batch" />
+        <module name="SpringBatch_6_6_FlowJob" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sibalgaesaeki" target="17" />
+      <module name="spring-batch" target="11" />
+      <module name="SpringBatch_4_1_BatchInitConfiguration" target="17" />
+      <module name="SpringBatch_4_1_BatchInitConfiguration (1)" target="17" />
+      <module name="SpringBatch_4_1_BatchInitConfiguration (2)" target="17" />
+      <module name="SpringBatch_4_1_BatchInitConfiguration (3)" target="17" />
+      <module name="SpringBatch_4_1_BatchInitConfiguration (4)" target="17" />
+      <module name="SpringBatch_4_1_BatchInitConfiguration (5)" target="17" />
+      <module name="SpringBatch_6_1_FlowJobConcept" target="17" />
+      <module name="SpringBatch_6_2_FlowJob" target="17" />
+      <module name="SpringBatch_6_2_FlowJob (1)" target="17" />
+      <module name="SpringBatch_6_2_FlowJob (2)" target="17" />
+      <module name="SpringBatch_6_3_Transition" target="17" />
+      <module name="SpringBatch_6_4_CustomExitStatus" target="17" />
+      <module name="SpringBatch_6_5_JobExecutionDecider" target="17" />
+      <module name="SpringBatch_6_6_FlowJob" target="17" />
+      <module name="SpringBatch_6_7_SimpleFlow" target="17" />
+      <module name="SpringBatch_6_8_SimpleFlowExample" target="17" />
+      <module name="SpringBatch_6_9_SimpleFlowArchitecture" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SpringBatch_4_1_BatchInitConfiguration" options="-parameters" />
+      <module name="SpringBatch_4_1_BatchInitConfiguration (1)" options="-parameters" />
+      <module name="SpringBatch_4_1_BatchInitConfiguration (2)" options="-parameters" />
+      <module name="SpringBatch_4_1_BatchInitConfiguration (3)" options="-parameters" />
+      <module name="SpringBatch_4_1_BatchInitConfiguration (4)" options="-parameters" />
+      <module name="SpringBatch_4_1_BatchInitConfiguration (5)" options="-parameters" />
+      <module name="SpringBatch_6_1_FlowJobConcept" options="-parameters" />
+      <module name="SpringBatch_6_2_FlowJob" options="-parameters" />
+      <module name="SpringBatch_6_2_FlowJob (1)" options="-parameters" />
+      <module name="SpringBatch_6_2_FlowJob (2)" options="-parameters" />
+      <module name="SpringBatch_6_3_Transition" options="-parameters" />
+      <module name="SpringBatch_6_4_CustomExitStatus" options="-parameters" />
+      <module name="SpringBatch_6_5_JobExecutionDecider" options="-parameters" />
+      <module name="SpringBatch_6_6_FlowJob" options="-parameters" />
+      <module name="SpringBatch_6_7_SimpleFlow" options="-parameters" />
+      <module name="SpringBatch_6_8_SimpleFlowExample" options="-parameters" />
+      <module name="SpringBatch_6_9_SimpleFlowArchitecture" options="-parameters" />
+      <module name="sibalgaesaeki" options="-parameters" />
+      <module name="spring-batch" options="-parameters" />
     </option>
   </component>
 </project>

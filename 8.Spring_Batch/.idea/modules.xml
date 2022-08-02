@@ -3,6 +3,22 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/8.Spring_Batch.iml" filepath="$PROJECT_DIR$/.idea/8.Spring_Batch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/SpringBatch_4_1_BatchInitConfiguration.iml" filepath="$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/SpringBatch_4_1_BatchInitConfiguration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_5_2_Step_TaskletStepConceptAndAPI/SpringBatch_4_1_BatchInitConfiguration (1).iml" filepath="$PROJECT_DIR$/SpringBatch_5_2_Step_TaskletStepConceptAndAPI/SpringBatch_4_1_BatchInitConfiguration (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_5_3_Step_TaskletStepTasklet/SpringBatch_4_1_BatchInitConfiguration (2).iml" filepath="$PROJECT_DIR$/SpringBatch_5_3_Step_TaskletStepTasklet/SpringBatch_4_1_BatchInitConfiguration (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_5_4_Step_startLimitAndAllowStartIfComplte/SpringBatch_4_1_BatchInitConfiguration (3).iml" filepath="$PROJECT_DIR$/SpringBatch_5_4_Step_startLimitAndAllowStartIfComplte/SpringBatch_4_1_BatchInitConfiguration (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_5_5_Step_TaskletStepArchitectureConfiguration/SpringBatch_4_1_BatchInitConfiguration (4).iml" filepath="$PROJECT_DIR$/SpringBatch_5_5_Step_TaskletStepArchitectureConfiguration/SpringBatch_4_1_BatchInitConfiguration (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_5_6_Step_JobStep/SpringBatch_4_1_BatchInitConfiguration (5).iml" filepath="$PROJECT_DIR$/SpringBatch_5_6_Step_JobStep/SpringBatch_4_1_BatchInitConfiguration (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_6_1_FlowJobConcept/SpringBatch_6_1_FlowJobConcept.iml" filepath="$PROJECT_DIR$/SpringBatch_6_1_FlowJobConcept/SpringBatch_6_1_FlowJobConcept.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_6_2_FlowJob/SpringBatch_6_2_FlowJob.iml" filepath="$PROJECT_DIR$/SpringBatch_6_2_FlowJob/SpringBatch_6_2_FlowJob.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_6_3_Transition/SpringBatch_6_2_FlowJob (1).iml" filepath="$PROJECT_DIR$/SpringBatch_6_3_Transition/SpringBatch_6_2_FlowJob (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_6_4_CustomExitStatus/SpringBatch_6_4_CustomExitStatus.iml" filepath="$PROJECT_DIR$/SpringBatch_6_4_CustomExitStatus/SpringBatch_6_4_CustomExitStatus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_6_5_JobExecutionDecider/SpringBatch_6_5_JobExecutionDecider.iml" filepath="$PROJECT_DIR$/SpringBatch_6_5_JobExecutionDecider/SpringBatch_6_5_JobExecutionDecider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_6_6_FlowJob/SpringBatch_6_6_FlowJob.iml" filepath="$PROJECT_DIR$/SpringBatch_6_6_FlowJob/SpringBatch_6_6_FlowJob.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_6_7_SimpleFlow/SpringBatch_6_7_SimpleFlow.iml" filepath="$PROJECT_DIR$/SpringBatch_6_7_SimpleFlow/SpringBatch_6_7_SimpleFlow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_6_8_SimpleFlowExample/SpringBatch_6_8_SimpleFlowExample.iml" filepath="$PROJECT_DIR$/SpringBatch_6_8_SimpleFlowExample/SpringBatch_6_8_SimpleFlowExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_6_9_SimpleFlowArchitecture/SpringBatch_6_9_SimpleFlowArchitecture.iml" filepath="$PROJECT_DIR$/SpringBatch_6_9_SimpleFlowArchitecture/SpringBatch_6_9_SimpleFlowArchitecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch_3_1_9_JobRepository/spring-batch.iml" filepath="$PROJECT_DIR$/SpringBatch_3_1_9_JobRepository/spring-batch.iml" />
     </modules>
   </component>
 </project>
