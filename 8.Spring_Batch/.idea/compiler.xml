@@ -7,33 +7,98 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SpringBatch_4_1_BatchInitConfiguration (2)" />
-        <module name="SpringBatch_4_1_BatchInitConfiguration (1)" />
+        <module name="SpringBatch_4_1_BatchInitConfiguration (3)" />
+        <module name="SpringBatch_8_10_JpaPagingItemReader" />
+        <module name="SpringBatch_12_2_Multi-threade_Step" />
+        <module name="SpringBatch_6_5_JobExecutionDecider" />
+        <module name="SpringBatch_6_15_ItemReaderAndItemWriterAndItemProcessor" />
+        <module name="SpringBatch_14_1_SpringBatchTest" />
+        <module name="SpringBatch_7_5_ItemStream" />
+        <module name="SpringBatch_6_8_SimpleFlowExample" />
+        <module name="SpringBatch_12_1_AsyncItemProcessor_AsyncItemWriter" />
+        <module name="SpringBatch_9_1_FlatFileItemWriter_DelimetedAndFormat" />
+        <module name="SpringBatch_15_1_ComprehensiveApplicationExample" />
+        <module name="spring-batch" />
+        <module name="SpringBatch_13_2_ChunkListener_ItemReadListener_ItemProcessList" />
         <module name="SpringBatch_6_2_FlowJob (1)" />
         <module name="SpringBatch_4_1_BatchInitConfiguration (4)" />
-        <module name="SpringBatch_4_1_BatchInitConfiguration (3)" />
-        <module name="SpringBatch_6_2_FlowJob" />
-        <module name="SpringBatch_4_1_BatchInitConfiguration (5)" />
-        <module name="SpringBatch_6_1_FlowJobConcept" />
+        <module name="SpringBatch_13_1_JobExecutionListener_StepExecutionListener" />
+        <module name="SpringBatch_8_2_FlatFileItemReader_Delimetedlinetokenizer" />
+        <module name="SpringBatch_12_5_SynchronizedItemStreamReader" />
+        <module name="SpringBatch_8_9_JdbcPagingItemReader" />
+        <module name="springbatch_9_2_flatfileitemwriter_format" />
+        <module name="SpringBatch_8_4_ExceptionHandling" />
         <module name="SpringBatch_4_1_BatchInitConfiguration" />
-        <module name="SpringBatch_6_5_JobExecutionDecider" />
-        <module name="SpringBatch_6_4_CustomExitStatus" />
+        <module name="SpringBatch_11_4_Retry_1" />
+        <module name="SpringBatch_8_8_JpaCursorItemReader" />
+        <module name="SpringBatch_12_3_Parallel_Steps" />
+        <module name="SpringBatch_8_11_ItemReaderAdapter" />
+        <module name="SpringBatch_11_2_FaultTolerant" />
+        <module name="SpringBatch_6_12_JobScopeAndStepScopeArchitecture" />
+        <module name="SpringBatch_8_7_JdbcCursorItemReader" />
+        <module name="SpringBatch_4_1_BatchInitConfiguration (1)" />
+        <module name="SpringBatch_8_6_JsonItemReader" />
+        <module name="SpringBatch_14_2_JobOperationConfiguration" />
+        <module name="SpringBatch_4_1_BatchInitConfiguration (5)" />
+        <module name="springBatch_8_5_StaxEventItemReader" />
         <module name="SpringBatch_6_7_SimpleFlow" />
-        <module name="SpringBatch_6_8_SimpleFlowExample" />
         <module name="SpringBatch_6_9_SimpleFlowArchitecture" />
-        <module name="spring-batch" />
+        <module name="SpringBoot_9_7_ItemWriteAdapter" />
+        <module name="SpringBatch_11_1_Repeat" />
+        <module name="SpringBatch_11_3_Skip" />
+        <module name="SpringBatch_12_4" />
+        <module name="springbatch_9_4_JsonFileItemWriter" />
+        <module name="SpringBatch_4_1_BatchInitConfiguration (2)" />
+        <module name="SpringBatch_6_2_FlowJob" />
+        <module name="SpringBatch_6_1_FlowJobConcept" />
+        <module name="SpringBatch_6_10_FlowStep" />
+        <module name="SpringBatch_10_1_CompositeItemProcessor" />
+        <module name="SpringBatch_9_5_JobBatchItemWriter" />
+        <module name="SpringBatch_6_4_CustomExitStatus" />
+        <module name="SpringBatch_15_1_1_ApiService" />
+        <module name="SpringBatch_10_2_ClassifierCompositeItemProcessor" />
+        <module name="SpringBatch_13_4_RetryListener" />
+        <module name="SpringBatch_8_3_fixedlengthtokenizer" />
+        <module name="springBatch_6_11_JobScopeAndStepScope" />
+        <module name="springbatch_9_3_XMLStaxEventItemWriter" />
+        <module name="SpringBatch_8_1_FlatFileItemReader" />
         <module name="SpringBatch_6_6_FlowJob" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="apiService" target="17" />
       <module name="sibalgaesaeki" target="17" />
       <module name="spring-batch" target="11" />
+      <module name="Spring_Batch_13_3_SkipListener_RetryListener" target="17" />
+      <module name="SpringBatch_10_1_CompositeItemProcessor" target="17" />
+      <module name="SpringBatch_10_1_Repeat" target="17" />
+      <module name="SpringBatch_10_2_ClassifierCompositeItemProcessor" target="17" />
+      <module name="SpringBatch_11_1_Repeat" target="17" />
+      <module name="SpringBatch_11_2_FaultTolerant" target="17" />
+      <module name="SpringBatch_11_3_Skip" target="17" />
+      <module name="SpringBatch_11_4_Retry_1" target="17" />
+      <module name="SpringBatch_12_1_AsyncItemProcessor_AsyncItemWriter" target="17" />
+      <module name="SpringBatch_12_2_Multi-threade_Step" target="17" />
+      <module name="SpringBatch_12_3_Parallel_Steps" target="17" />
+      <module name="SpringBatch_12_4" target="17" />
+      <module name="SpringBatch_12_5_SynchronizedItemStreamReader" target="17" />
+      <module name="SpringBatch_13_1_JobExecutionListener_StepExecutionListener" target="17" />
+      <module name="SpringBatch_13_2_ChunkListener_ItemReadListener_ItemProcessList" target="17" />
+      <module name="SpringBatch_13_4_RetryListener" target="17" />
+      <module name="SpringBatch_14_1_SpringBatchTest" target="17" />
+      <module name="SpringBatch_14_2_JobOperationConfiguration" target="17" />
+      <module name="SpringBatch_15_1_1_ApiService" target="17" />
+      <module name="SpringBatch_15_1_ComprehensiveApplicationExample" target="17" />
       <module name="SpringBatch_4_1_BatchInitConfiguration" target="17" />
       <module name="SpringBatch_4_1_BatchInitConfiguration (1)" target="17" />
       <module name="SpringBatch_4_1_BatchInitConfiguration (2)" target="17" />
       <module name="SpringBatch_4_1_BatchInitConfiguration (3)" target="17" />
       <module name="SpringBatch_4_1_BatchInitConfiguration (4)" target="17" />
       <module name="SpringBatch_4_1_BatchInitConfiguration (5)" target="17" />
+      <module name="SpringBatch_6_10_FlowStep" target="17" />
+      <module name="springBatch_6_11_JobScopeAndStepScope" target="17" />
+      <module name="SpringBatch_6_12_JobScopeAndStepScopeArchitecture" target="17" />
+      <module name="SpringBatch_6_15_ItemReaderAndItemWriterAndItemProcessor" target="17" />
       <module name="SpringBatch_6_1_FlowJobConcept" target="17" />
       <module name="SpringBatch_6_2_FlowJob" target="17" />
       <module name="SpringBatch_6_2_FlowJob (1)" target="17" />
@@ -45,16 +110,63 @@
       <module name="SpringBatch_6_7_SimpleFlow" target="17" />
       <module name="SpringBatch_6_8_SimpleFlowExample" target="17" />
       <module name="SpringBatch_6_9_SimpleFlowArchitecture" target="17" />
+      <module name="SpringBatch_7_1_ChunkConfiguration" target="17" />
+      <module name="SpringBatch_7_2_ChunkOrientedTasklet" target="17" />
+      <module name="SpringBatch_7_3_ChunkOrientedTasklet" target="17" />
+      <module name="SpringBatch_7_4_ItemReaderAndItemWriterAndItemProcessor" target="17" />
+      <module name="SpringBatch_7_5_ItemStream" target="17" />
+      <module name="SpringBatch_8_10_JpaPagingItemReader" target="17" />
+      <module name="SpringBatch_8_11_ItemReaderAdapter" target="17" />
+      <module name="SpringBatch_8_11_ItemReaderAdapter_sycj" target="17" />
+      <module name="SpringBatch_8_1_FlatFileItemReader" target="17" />
+      <module name="SpringBatch_8_2_FlatFileItemReader_Delimetedlinetokenizer" target="17" />
+      <module name="SpringBatch_8_3_fixedlengthtokenizer" target="17" />
+      <module name="SpringBatch_8_4_ExceptionHandling" target="17" />
+      <module name="springBatch_8_5_StaxEventItemReader" target="17" />
+      <module name="SpringBatch_8_6_JsonItemReader" target="17" />
+      <module name="SpringBatch_8_7_JdbcCursorItemReader" target="17" />
+      <module name="SpringBatch_8_8_JpaCursorItemReader" target="17" />
+      <module name="SpringBatch_8_9_JdbcPagingItemReader" target="17" />
+      <module name="SpringBatch_9_1_FlatFileItemWriter_DelimetedAndFormat" target="17" />
+      <module name="springbatch_9_1_flatfileitemwriter_format" target="17" />
+      <module name="springbatch_9_2_flatfileitemwriter_format" target="17" />
+      <module name="springbatch_9_3_XMLStaxEventItemWriter" target="17" />
+      <module name="springbatch_9_4_JsonFileItemWriter" target="17" />
+      <module name="SpringBatch_9_5_JobBatchItemWriter" target="17" />
+      <module name="SpringBatch_9_6_JpaItemWriter" target="17" />
+      <module name="SpringBoot_9_7_ItemWriteAdapter" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringBatch_10_1_CompositeItemProcessor" options="-parameters" />
+      <module name="SpringBatch_10_1_Repeat" options="-parameters" />
+      <module name="SpringBatch_10_2_ClassifierCompositeItemProcessor" options="-parameters" />
+      <module name="SpringBatch_11_1_Repeat" options="-parameters" />
+      <module name="SpringBatch_11_2_FaultTolerant" options="-parameters" />
+      <module name="SpringBatch_11_3_Skip" options="-parameters" />
+      <module name="SpringBatch_11_4_Retry_1" options="-parameters" />
+      <module name="SpringBatch_12_1_AsyncItemProcessor_AsyncItemWriter" options="-parameters" />
+      <module name="SpringBatch_12_2_Multi-threade_Step" options="-parameters" />
+      <module name="SpringBatch_12_3_Parallel_Steps" options="-parameters" />
+      <module name="SpringBatch_12_4" options="-parameters" />
+      <module name="SpringBatch_12_5_SynchronizedItemStreamReader" options="-parameters" />
+      <module name="SpringBatch_13_1_JobExecutionListener_StepExecutionListener" options="-parameters" />
+      <module name="SpringBatch_13_2_ChunkListener_ItemReadListener_ItemProcessList" options="-parameters" />
+      <module name="SpringBatch_13_4_RetryListener" options="-parameters" />
+      <module name="SpringBatch_14_1_SpringBatchTest" options="-parameters" />
+      <module name="SpringBatch_14_2_JobOperationConfiguration" options="-parameters" />
+      <module name="SpringBatch_15_1_1_ApiService" options="-parameters" />
+      <module name="SpringBatch_15_1_ComprehensiveApplicationExample" options="-parameters" />
       <module name="SpringBatch_4_1_BatchInitConfiguration" options="-parameters" />
       <module name="SpringBatch_4_1_BatchInitConfiguration (1)" options="-parameters" />
       <module name="SpringBatch_4_1_BatchInitConfiguration (2)" options="-parameters" />
       <module name="SpringBatch_4_1_BatchInitConfiguration (3)" options="-parameters" />
       <module name="SpringBatch_4_1_BatchInitConfiguration (4)" options="-parameters" />
       <module name="SpringBatch_4_1_BatchInitConfiguration (5)" options="-parameters" />
+      <module name="SpringBatch_6_10_FlowStep" options="-parameters" />
+      <module name="SpringBatch_6_12_JobScopeAndStepScopeArchitecture" options="-parameters" />
+      <module name="SpringBatch_6_15_ItemReaderAndItemWriterAndItemProcessor" options="-parameters" />
       <module name="SpringBatch_6_1_FlowJobConcept" options="-parameters" />
       <module name="SpringBatch_6_2_FlowJob" options="-parameters" />
       <module name="SpringBatch_6_2_FlowJob (1)" options="-parameters" />
@@ -66,8 +178,36 @@
       <module name="SpringBatch_6_7_SimpleFlow" options="-parameters" />
       <module name="SpringBatch_6_8_SimpleFlowExample" options="-parameters" />
       <module name="SpringBatch_6_9_SimpleFlowArchitecture" options="-parameters" />
+      <module name="SpringBatch_7_1_ChunkConfiguration" options="-parameters" />
+      <module name="SpringBatch_7_2_ChunkOrientedTasklet" options="-parameters" />
+      <module name="SpringBatch_7_3_ChunkOrientedTasklet" options="-parameters" />
+      <module name="SpringBatch_7_4_ItemReaderAndItemWriterAndItemProcessor" options="-parameters" />
+      <module name="SpringBatch_7_5_ItemStream" options="-parameters" />
+      <module name="SpringBatch_8_10_JpaPagingItemReader" options="-parameters" />
+      <module name="SpringBatch_8_11_ItemReaderAdapter" options="-parameters" />
+      <module name="SpringBatch_8_11_ItemReaderAdapter_sycj" options="-parameters" />
+      <module name="SpringBatch_8_1_FlatFileItemReader" options="-parameters" />
+      <module name="SpringBatch_8_2_FlatFileItemReader_Delimetedlinetokenizer" options="-parameters" />
+      <module name="SpringBatch_8_3_fixedlengthtokenizer" options="-parameters" />
+      <module name="SpringBatch_8_4_ExceptionHandling" options="-parameters" />
+      <module name="SpringBatch_8_6_JsonItemReader" options="-parameters" />
+      <module name="SpringBatch_8_7_JdbcCursorItemReader" options="-parameters" />
+      <module name="SpringBatch_8_8_JpaCursorItemReader" options="-parameters" />
+      <module name="SpringBatch_8_9_JdbcPagingItemReader" options="-parameters" />
+      <module name="SpringBatch_9_1_FlatFileItemWriter_DelimetedAndFormat" options="-parameters" />
+      <module name="SpringBatch_9_5_JobBatchItemWriter" options="-parameters" />
+      <module name="SpringBatch_9_6_JpaItemWriter" options="-parameters" />
+      <module name="SpringBoot_9_7_ItemWriteAdapter" options="-parameters" />
+      <module name="Spring_Batch_13_3_SkipListener_RetryListener" options="-parameters" />
+      <module name="apiService" options="-parameters" />
       <module name="sibalgaesaeki" options="-parameters" />
       <module name="spring-batch" options="-parameters" />
+      <module name="springBatch_6_11_JobScopeAndStepScope" options="-parameters" />
+      <module name="springBatch_8_5_StaxEventItemReader" options="-parameters" />
+      <module name="springbatch_9_1_flatfileitemwriter_format" options="-parameters" />
+      <module name="springbatch_9_2_flatfileitemwriter_format" options="-parameters" />
+      <module name="springbatch_9_3_XMLStaxEventItemWriter" options="-parameters" />
+      <module name="springbatch_9_4_JsonFileItemWriter" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/SpringBatch_10_1_CompositeItemProcessor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_10_2_ClassifierCompositeItemProcessor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_11_1_Repeat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_11_2_FaultTolerant/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_11_3_Skip/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_11_4_Retry/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_11_4_Retry/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_12_1_AsyncItemProcessor_AsyncItemWriter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_12_2_Multi-threade_Step/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_12_3_Parallel_Steps/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_12_4_Partitioning/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_12_5_SynchronizedItemStreamReader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_13_1_JobExecutionListener_StepExecutionListener/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_13_2_ChunkListener_ItemReadListener_ItemProcessList/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_13_3_SkipListener/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_13_3_SkipListener/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_13_4_RetryListener/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_14_1_SpringBatchTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_14_2_JobOperationConfiguration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_15_1_1_ApiService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_15_1_ComprehensiveApplicationExample/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBatch_3_1_9_JobRepository/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBatch_3_1_9_JobRepository/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBatch_4_1_BatchInitConfigration/src/main/java" charset="UTF-8" />
@@ -15,6 +36,8 @@
     <file url="file://$PROJECT_DIR$/SpringBatch_5_5_Step_TaskletStepArchitectureConfiguration/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBatch_5_6_Step_JobStep/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBatch_5_6_Step_JobStep/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_10_FlowStep/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_6_12_JobScopeAndStepScopeArchitecture/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBatch_6_1_FlowJobConcept/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBatch_6_1_FlowJobConcept/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBatch_6_2_FlowJob/src/main/java" charset="UTF-8" />
@@ -26,7 +49,38 @@
     <file url="file://$PROJECT_DIR$/SpringBatch_6_8_SimpleFlowExample/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBatch_6_9_SimpleFlowArchitecture/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBatch_6_9_SimpleFlowArchitecture/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_7_1_ChunkConfiguration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_7_2_ChunkOrientedTasklet/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_7_3_ChunkProviderChunkProcessorConfiguration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_7_3_ChunkProviderChunkProcessorConfiguration/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_7_4_ItemReaderAndItemWriterAndItemProcessor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_7_5_ItemStream/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_10_JpaPagingItemReader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_11_ItemReaderAdapter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_11_ItemReaderAdapter_sycj/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_11_ItemReaderAdapter_sycj/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_1_FlatFileItemReader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_2_FlatFileItemReader_Delimetedlinetokenizer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_2_FlatFileItemReader_Delimetedlinetokenizer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_3_fixedlengthtokenizer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_4_ExceptionHandling/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_5_StaxEventItemReader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_6_JsonItemReader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_7_JdbcCursorItemReader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_8_JpaCursorItemReader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_8_9_JdbcPagingItemReader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_9_1_FlatFileItemWriter_DelimetedAndFormat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_9_5_JobBatchItemWriter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_9_6_JpaItemWriter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_9_7_ItemWriteAdapter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBatch_9_7_ItemWriteAdapter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springbatch_9_2_flatfileitemwriter_format/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springbatch_9_3_XMLStaxEventItemWriter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springbatch_9_4_JsonFileItemWriter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apiService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sibalgaesaeki/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sibalgaesaeki/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springBatch_6_11_JobScopeAndStepScope/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbatch_9_1_flatfileitemwriter_format/src/main/java" charset="UTF-8" />
   </component>
 </project>

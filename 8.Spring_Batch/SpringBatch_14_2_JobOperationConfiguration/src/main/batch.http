@@ -1,0 +1,15 @@
+### Send Post start witdh json bdy
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+### Send Post stop withd json body
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+### Send restart restart with body
+POST http://localhost:8080/batch/restart
+Content-Type: application/json
