@@ -1,0 +1,6 @@
+token:
+  expiration_time: 864000000
+  secret: my_token_value2
+
+gateway:
+  ip: 172.20.10.7
