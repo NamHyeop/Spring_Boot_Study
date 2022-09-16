@@ -1,0 +1,12 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+#          uri: file:///Users/namhyeop/Desktop/gitInfo/Spring_Boot_Study/9.Spring_Cloud/10.SpringCloudConfig/git-local-repo
