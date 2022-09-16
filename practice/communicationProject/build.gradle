@@ -1,4 +1,6 @@
 plugins {
+	//Spring Rest Docs - asciidoctor 컨버터
+//	id "org.asciidoctor.convert" version "1.5.9.2"
 	id 'org.springframework.boot' version '2.6.6'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
@@ -19,6 +21,12 @@ repositories {
 }
 
 dependencies {
+    implementation 'junit:junit:4.13.1'
+	implementation 'junit:junit:4.13.1'
+
+	//Spring Rest Docs - Spring Rest Docs Dependnecy
+	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
@@ -30,12 +38,59 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 
+	//Swagger
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
 	//Json Web Token 사용을 위한 dependencies 추가
 	// https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
 	implementation 'io.jsonwebtoken:jjwt:0.9.1'
 	//p6spy 추가
 	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.7.1'
 }
+
+//===============================Spring Rest Docs=========================
+
+////ext가 필요한 이유
+////우리가 Api에 대한 내용을 만들고 이를 rest docs에 적용하기 위해서는 adoc이라는 걸 만들어야한다.
+////adoc이란 asciidoc의 확장자인데 우리의 restdocs는 이러한 adoc을 테스트 케이스의 request, response마다 만들어준다.
+////우리가 설정한다면 말이다. 그런 adoc들의 파일 설정에 있어서 root 경로가 되는 게 저 snippetsDir이다.
+//ext {
+//	snippetsDir = file('build/generated-snippets')
+//}
+////나중에 프로젝트 전체를 jar파일로 만들 때 restdocs가 해당 jar파일에 들어가게끔 하기위한 부분으로
+////boot 실행 시에 asciidoctor.outputDir에 있는 html 파일을 BOOT-INF/classes/static/docs의 경로 아래로 복사해주는 역할을 한다.
+//bootJar {
+//	dependsOn asciidoctor
+//	copy {
+//		from "${asciidoctor.outputDir}"
+//		into 'BOOT-INF/classes/static/docs'
+//	}
+//}
+//
+//asciidoctor {
+//	dependsOn test
+//	inputs.dir snippetsDir
+//}
+//
+//
+//test {
+//	outputs.dir snippetsDir
+//}
+//
+//asciidoctor.doFirst {
+//	delete file('src/main/resources/static/docs')
+//}
+//
+//task copyDocument(type: Copy) {
+//	dependsOn asciidoctor
+//	from file("build/docs/asciidoc")
+//	into file("src/main/resources/static/docs")
+//}
+//
+//build {
+//	dependsOn copyDocument
+//}
+////=============================================================================
+
 
 tasks.named('test') {
 	useJUnitPlatform()

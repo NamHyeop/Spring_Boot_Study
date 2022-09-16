@@ -1,0 +1,478 @@
+POST http://localhost:8080/batch/restart
+Content-Type: application/json
+
+<> 2022-08-28T223847.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T223321.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T223319.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T222921.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T222914.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T222437.500.json
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T222436.500.json
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T222435.500.json
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T222433.500.json
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T222209.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T222201.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T222051.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T222043.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T221710.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T221609.500.json
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T221523.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T221235.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T221227.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T221003.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T220954.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T220911.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T220903.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T220720.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T220714.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T220435.500.json
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T220234.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T220158.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T214542.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T214146.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T214045.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T213843.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T213649.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T213303.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T213150.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T213122.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T213104.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T213042.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T213023.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T213012.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T212957.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T212956.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T212955.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T212954.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T212935.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T212906.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T212901.200.txt
+
+###
+
+POST http://localhost:8080/batch/restart
+Content-Type: application/json
+
+<> 2022-08-28T210316.200.txt
+
+###
+
+POST http://localhost:8080/batch/start
+Content-Type: application/json
+
+{
+  "id" : "leaven"
+}
+
+<> 2022-08-28T210052.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T210051.200.txt
+
+###
+
+POST http://localhost:8080/batch/stop
+Content-Type: application/json
+
+<> 2022-08-28T205058.500.json
+
+###
+

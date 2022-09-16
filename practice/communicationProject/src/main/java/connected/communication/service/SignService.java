@@ -1,20 +1,19 @@
 package connected.communication.service;
 
+import connected.communication.config.token.TokenHelper;
 import connected.communication.dto.MemberEmailAlreadyExistsException;
 import connected.communication.dto.MemberNicknameAlreadyExistsException;
 import connected.communication.dto.sign.RefreshTokenResponse;
+import connected.communication.dto.sign.SignInRequest;
 import connected.communication.dto.sign.SignInResponse;
 import connected.communication.dto.sign.SignUpRequest;
-import connected.communication.dto.sign.SignInRequest;
 import connected.communication.entity.member.Member;
 import connected.communication.entity.member.RoleType;
 import connected.communication.exception.AuthenticationEntryPointException;
 import connected.communication.exception.LoginFailureException;
-import connected.communication.exception.MemberNotFoundException;
 import connected.communication.exception.RoleNotFoundException;
 import connected.communication.repository.member.MemberRepository;
 import connected.communication.repository.role.RoleRepository;
-import connected.communication.service.sign.TokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -27,7 +26,9 @@ public class SignService {
     private final MemberRepository memberRepository;
     private final RoleRepository roleRepository;
     private final PasswordEncoder passwordEncoder;
-    private final TokenService tokenService;
+    private final TokenHelper accessTokenHelper;
+    private final TokenHelper refreshTokenHelper;
+
     /**
      * 회원 등록 로직
      */
@@ -47,18 +48,22 @@ public class SignService {
         Member member = memberRepository.findByEmail(req.getEmail()).orElseThrow(LoginFailureException::new);
         validatePassword(req, member);
         String subject = createSubject(member);
-        String accessToken = tokenService.createAccessToken(subject);
-        String refreshToken = tokenService.createRefreshToken(subject);
+        String accessToken = accessTokenHelper.createToken(subject);
+        String refreshToken = refreshTokenHelper.createToken(subject);
         return new SignInResponse(accessToken, refreshToken);
     }
 
-    private String createSubject(Member member) {
-        return String.valueOf(member.getId());
+    public RefreshTokenResponse refreshToken(String rToken){
+        validateRefreshToken(rToken);
+        String subject = refreshTokenHelper.extractSubject(rToken);
+        String accessToken = accessTokenHelper.createToken(subject);
+        return new RefreshTokenResponse(accessToken);
     }
 
-    private void validatePassword(SignInRequest req, Member member) {
-        if(!passwordEncoder.matches(req.getPassword(), member.getPassword()))
-            throw new LoginFailureException();
+    private void validateRefreshToken(String rToken) {
+        if(!refreshTokenHelper.validate(rToken)){
+            throw new AuthenticationEntryPointException();
+        }
     }
 
     private void validateSignUpInfo(SignUpRequest req) {
@@ -74,16 +79,12 @@ public class SignService {
             throw new MemberNicknameAlreadyExistsException(req.getNickname());
     }
 
-    public RefreshTokenResponse refreshToken(String rToken){
-        validateRefreshToken(rToken);
-        String subject = tokenService.extractRefreshTokenSubject(rToken);
-        String accessToken = tokenService.createAccessToken(subject);
-        return new RefreshTokenResponse(accessToken);
+    private String createSubject(Member member) {
+        return String.valueOf(member.getId());
     }
 
-    private void validateRefreshToken(String rToken) {
-        if(!tokenService.validateRefreshToken(rToken)){
-            throw new AuthenticationEntryPointException();
-        }
+    private void validatePassword(SignInRequest req, Member member) {
+        if(!passwordEncoder.matches(req.getPassword(), member.getPassword()))
+            throw new LoginFailureException();
     }
 }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/SpringBatch_3_1_9_JobRepository/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_5_2_Step_TaskletStepConceptAndAPI/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_5_3_Step_TaskletStepTasklet/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_5_4_Step_startLimitAndAllowStartIfComplte/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_5_5_Step_TaskletStepArchitecture/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_5_5_Step_TaskletStepArchitectureConfiguration/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_5_6_Step_JobStep/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_1_FlowJobConcept/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_2_FlowJob/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_Batch_6_3_Transition/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_3_Transition/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_4_CustomExitStatus/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_5_JobExecutionDecider/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_6_FlowJob/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_7_SimpleFlow/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_8_SimpleFlowExample/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_9_SimpleFlowArchitecture/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_10_FlowStep/pom.xml" />
+        <option value="$PROJECT_DIR$/springBatch_6_11_JobScopeAndStepScope/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_12_JobScopeAndStepScopeArchitecture/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_13_ChunkConfiguration/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_14_ChunkOrientedTasklet/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_14_ChunkProviderChunkProcessorConfiguration/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_6_15_ItemReaderAndItemWriterAndItemProcessor/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_7_5_ItemStream/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_7_4_ItemReaderAndItemWriterAndItemProcessor/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_8_1_FlatFileItemReader/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_8_2_FlatFileItemReader_Delimetedlinetokenizer/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_8_3_fixedlengthtokenizer/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_8_4_ExceptionHandling/pom.xml" />
+        <option value="$PROJECT_DIR$/springBatch_8_5_StaxEventItemReader/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_8_6_JsonItemReader/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_8_7_JdbcCursorItemReader/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_8_8_JpaCursorItemReader/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_8_9_JdbcPagingItemReader/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_8_10_JpaPagingItemReader/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_8_10_ItemReaderAdapter/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_8_11_ItemReaderAdapter/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_9_1_FlatFileItemWriter_DelimetedAndFormat/pom.xml" />
+        <option value="$PROJECT_DIR$/springbatch_9_2_flatfileitemwriter_format/pom.xml" />
+        <option value="$PROJECT_DIR$/springbatch_9_3_XMLStaxEventItemWriter/pom.xml" />
+        <option value="$PROJECT_DIR$/springbatch_9_4_JsonFileItemWriter/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_9_5_JobBatchItemWriter/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot_9_6_JpaItemWriter/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot_9_7_ItemWriteAdapter/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_10_1_CompositeItemProcessor/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_10_2_ClassifierCompositeItemProcessor/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_9_7_ItemWriteAdapter/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_10_1_Repeat/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_11_1_Repeat/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_11_2_FaultTolerant/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_11_3_Skip/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_11_4_Retry_1/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_11_4_Retry/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_12_1_AsyncItemProcessor_AsyncItemWriter/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_12_2_Multi-threade_Step/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_12_3_Parallel_Steps/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_12_4/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_12_5_SynchronizedItemStreamReader/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_12_4_Partitioning/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_13_1_JobExecutionListener_StepExecutionListener/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_13_2_ChunkListener_ItemReadListener_ItemProcessList/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_13_3_SkipListener_RetryListener/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_13_4_RetryListener/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_14_1_SpringBatchTest/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_14_2_JobOperationConfiguration/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_15_1_ComprehensiveApplicationExample/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBatch_15_1_1_ApiService/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="18" project-jdk-type="JavaSDK" />
+</project>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/1.ServiceDiscovery_discoveryservice" />
+        <option name="gradleJvm" value="8-" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/1.ServiceDiscovery_discoveryservice" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/2.ServiceDiscovery_clinet-userservice" />
+        <option name="gradleJvm" value="8-" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/2.ServiceDiscovery_clinet-userservice" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/4.APIGatewayService_userservice1" />
+        <option name="gradleJvm" value="8-" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/4.APIGatewayService_userservice1" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/5.APIGatewayService_userservice2" />
+        <option name="gradleJvm" value="8-" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/5.APIGatewayService_userservice2" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/6.APIGatewayService_SpringCloudGateway" />
+        <option name="gradleJvm" value="8-" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/6.APIGatewayService_SpringCloudGateway" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,113 @@
+server:
+  port: 8000
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: apigateway-service
+  cloud:
+    gateway:
+      default-filters:
+        #        name은 GlobalFilter로 등록할 Class 이름과 동일해야 한다.
+        - name : GlobalFilter
+          args:
+            baseMessage: Spring Cloud GateWay GlobalFilter args
+            preLogger: true
+            postLogger: true
+      routes:
+#        - id: user-service
+#          #          uri: http://localhost:8071/
+#          uri: lb://USER-SERVICE
+#          predicates:
+#            - Path=/user-service/**
+        - id: user-service
+            #          uri: http://localhost:8071/
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/login
+            - Method=POST
+          filters:
+            # Post 요청은 매번 새로운 요청으로 인식하기 위해 Cookie 값을 제거해준다.
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+        - id: user-service
+            #          uri: http://localhost:8071/
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/users
+            - Method=POST
+          filters:
+            # Post 요청은 매번 새로운 요청으로 인식하기 위해 Cookie 값을 제거해준다.
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+        - id: user-service
+            #          uri: http://localhost:8071/
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/**
+            - Method=GET
+          filters:
+            # Post 요청은 매번 새로운 요청으로 인식하기 위해 Cookie 값을 제거해준다.
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+            - AuthorizationHeaderFilter
+        - id: user-service
+            #          uri: http://localhost:8071/
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/actuator/**
+            - Method=GET,POST
+          filters:
+              # Post 요청은 매번 새로운 요청으로 인식하기 위해 Cookie 값을 제거해준다.
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+        - id: catalog-service
+            #          uri: http://localhost:8071/
+          uri: lb://CATALOG-SERVICE
+          predicates:
+            - Path=/catalog-service/**
+        - id: order-service
+            #          uri: http://localhost:8071/
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/order-service/**
+        - id: first-service
+          #          uri: http://localhost:8071/
+          uri: lb://MY-FIRST-SERVICE
+          predicates:
+            - Path=/first-service/**
+            # 아래처럼 필터에서 매개변수를 만들고 controller에 전달할 수 있다.
+          filters:
+            #            - AddRequestHeader=first-request-key, first-request-header-value
+            #            - AddResponseHeader=first-response-key, first-response-header-value
+            - CustomFilter
+        - id: second-service
+          #          uri: http://localhost:8072/
+          uri: lb://MY-SECOND-SERVICE
+          predicates:
+            - Path=/second-service/**
+          filters:
+            #            - AddRequestHeader=second-request-key, second-request-header-value
+            #            - AddResponseHeader=second-response-key, second-response-header-value
+            # 커스텀 변수에 LoggingFilter를 추가
+            - name: CustomFilter
+            - name: LoggingFilter
+              args:
+                baseMessage: Hi, there.
+                preLogger: true
+                postLogger: true
+
+token:
+  secret: user_token
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: refresh, health, beans, httptrace

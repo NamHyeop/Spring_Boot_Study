@@ -1,0 +1,6 @@
+{
+  "timestamp": "2022-08-28T11:50:58.662+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/batch/stop"
+}

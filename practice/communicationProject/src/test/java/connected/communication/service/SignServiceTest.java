@@ -1,6 +1,6 @@
 package connected.communication.service;
 
-import com.fasterxml.jackson.databind.annotation.JsonTypeResolver;
+import connected.communication.config.token.TokenHelper;
 import connected.communication.dto.MemberEmailAlreadyExistsException;
 import connected.communication.dto.MemberNicknameAlreadyExistsException;
 import connected.communication.dto.sign.RefreshTokenResponse;
@@ -15,18 +15,18 @@ import connected.communication.exception.LoginFailureException;
 import connected.communication.exception.RoleNotFoundException;
 import connected.communication.repository.member.MemberRepository;
 import connected.communication.repository.role.RoleRepository;
-import connected.communication.service.sign.TokenService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.util.Collections;
 import java.util.Optional;
 
-import static java.util.Collections.*;
+import static java.util.Collections.emptyList;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
@@ -36,14 +36,26 @@ import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
 class SignServiceTest {
-    @InjectMocks SignService signService;
-    @Mock MemberRepository memberRepository;
-    @Mock RoleRepository roleRepository;
-    @Mock PasswordEncoder passwordEncoder;
-    @Mock TokenService tokenService;
+
+    SignService signService;
+    @Mock
+    MemberRepository memberRepository;
+    @Mock
+    RoleRepository roleRepository;
+    @Mock
+    PasswordEncoder passwordEncoder;
+    @Mock
+    TokenHelper accessTokenHelper;
+    @Mock
+    TokenHelper refreshTokenHelper;
+
+    @BeforeEach
+    void beforeEach(){
+        signService = new SignService(memberRepository, roleRepository, passwordEncoder, accessTokenHelper, refreshTokenHelper);
+    }
 
     @Test
-    public void signUpTest() throws Exception{
+    public void signUpTest() throws Exception {
         //given
         SignUpRequest req = createSignUprequest();
         given(roleRepository.findByRoleType(RoleType.ROLE_NORMAL)).willReturn(Optional.of(new Role(RoleType.ROLE_NORMAL)));
@@ -55,7 +67,7 @@ class SignServiceTest {
     }
 
     @Test
-    void validateSignUpByDuplicateEmailTest() throws Exception{
+    void validateSignUpByDuplicateEmailTest() throws Exception {
         //given
         given(memberRepository.existsByEmail(anyString())).willReturn(true);
         //when,then
@@ -64,39 +76,39 @@ class SignServiceTest {
     }
 
     @Test
-    public void validateSignUpByDuplicateNickNameTest() throws Exception{
+    public void validateSignUpByDuplicateNickNameTest() throws Exception {
         //given
         given(memberRepository.existsByNickname(anyString())).willReturn(true);
         //when
         //then
         assertThatThrownBy(() -> signService.signUp(createSignUprequest())).isInstanceOf(MemberNicknameAlreadyExistsException.class);
     }
-    
+
     @Test
-    public void signUpRoleNotFoundTest() throws Exception{
+    public void signUpRoleNotFoundTest() throws Exception {
         //given
         given(roleRepository.findByRoleType(RoleType.ROLE_NORMAL)).willReturn(Optional.empty());
         //when
         //then
         assertThatThrownBy(() -> signService.signUp(createSignUprequest())).isInstanceOf(RoleNotFoundException.class);
     }
-    
+
     @Test
-    public void signInTest() throws Exception{
+    public void signInTest() throws Exception {
         //given
         given(memberRepository.findByEmail(any())).willReturn(Optional.of(createMember()));
         given(passwordEncoder.matches(anyString(), anyString())).willReturn(true);
-        given(tokenService.createAccessToken(anyString())).willReturn("access");
-        given(tokenService.createRefreshToken(anyString())).willReturn("refresh");
+        given(accessTokenHelper.createToken(anyString())).willReturn("access");
+        given(refreshTokenHelper.createToken(anyString())).willReturn("refresh");
         //when
         SignInResponse signInResponse = signService.signIn(new SignInRequest("email", "password"));
         //then
         assertThat(signInResponse.getAccessToken()).isEqualTo("access");
         assertThat(signInResponse.getRefreshToken()).isEqualTo("refresh");
-    }   
-    
+    }
+
     @Test
-    public void signInExceptionByNoneMemberTest() throws Exception{
+    public void signInExceptionByNoneMemberTest() throws Exception {
         //given
         given(memberRepository.findByEmail(any())).willReturn(Optional.empty());
 
@@ -115,24 +127,24 @@ class SignServiceTest {
     }
 
     @Test
-    public void signInExceptionByInvalidPasswordTest() throws Exception{
+    public void signInExceptionByInvalidPasswordTest() throws Exception {
         //given
         given(memberRepository.findByEmail(any())).willReturn(Optional.of(createMember()));
-        given(passwordEncoder.matches(anyString(),anyString())).willReturn(false);
+        given(passwordEncoder.matches(anyString(), anyString())).willReturn(false);
         //when
         //then
-        assertThatThrownBy(() -> signService.signIn(new SignInRequest("email","password"))).isInstanceOf(LoginFailureException.class);
+        assertThatThrownBy(() -> signService.signIn(new SignInRequest("email", "password"))).isInstanceOf(LoginFailureException.class);
     }
 
     @Test
-    public void refreshTokenTest() throws Exception{
+    public void refreshTokenTest() throws Exception {
         //given
-        String refreshToken="refreshToken";
+        String refreshToken = "refreshToken";
         String subject = "subject";
-        String accessToken="accessToken";
-        given(tokenService.validateRefreshToken(refreshToken)).willReturn(true);
-        given(tokenService.extractRefreshTokenSubject(refreshToken)).willReturn(subject);
-        given(tokenService.createAccessToken(subject)).willReturn(accessToken);
+        String accessToken = "accessToken";
+        given(refreshTokenHelper.validate(refreshToken)).willReturn(true);
+        given(refreshTokenHelper.extractSubject(refreshToken)).willReturn(subject);
+        given(accessTokenHelper.createToken(subject)).willReturn(accessToken);
         //when
         RefreshTokenResponse res = signService.refreshToken(refreshToken);
         //then
@@ -140,19 +152,19 @@ class SignServiceTest {
     }
 
     @Test
-    void refreshTokenExceptionByInvalidTokenTest(){
+    void refreshTokenExceptionByInvalidTokenTest() {
         //given
-        String refreshToken="refreshToken";
-        given(tokenService.validateRefreshToken(refreshToken)).willReturn(false);
+        String refreshToken = "refreshToken";
+        given(refreshTokenHelper.validate(refreshToken)).willReturn(false);
         //when//then
-        assertThatThrownBy(()->signService.refreshToken(refreshToken)).isInstanceOf(AuthenticationEntryPointException.class);
+        assertThatThrownBy(() -> signService.refreshToken(refreshToken)).isInstanceOf(AuthenticationEntryPointException.class);
     }
 
     private SignUpRequest createSignUprequest() {
         return new SignUpRequest("email", "password", "username", "nickname");
     }
-    
-    private Member createMember(){
+
+    private Member createMember() {
         return new Member("email", "password", "username", "nickname", emptyList());
     }
 }

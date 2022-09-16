@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f32f1652-ea5e-4cf9-9f34-5d2d3dcb0d50" name="Changes" comment="feat : finish spring batch Example">
+      <change beforePath="$PROJECT_DIR$/SpringBatch_15_1_ComprehensiveApplicationExample/src/main/java/com/example/springbatch_15_1_comprehensiveapplicationexample/scheduler/ApiSchJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBatch_15_1_ComprehensiveApplicationExample/src/main/java/com/example/springbatch_15_1_comprehensiveapplicationexample/scheduler/ApiSchJob.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2CKg1u4A8jcMpiWIFC1Ay1EwxOs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
+    <property name="jdk.selected.JAVA_MODULE" value="18" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/SpringBatch_15_1_ComprehensiveApplicationExample/src/main/java/com/example/springbatch_15_1_comprehensiveapplicationexample/batch/job/api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reactor" />
+    <property name="show.run.dashboard.notification" value="false" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.springbatch_15_1_1_apiservice" />
+      <recent name="com.example.springbatch_15_1_comprehensiveapplicationexample.service" />
+      <recent name="com.example.springbatch_15_1_comprehensiveapplicationexample.batch.chunk.writer" />
+      <recent name="com.example.springbatch_15_1_comprehensiveapplicationexample.batch.chunk.processor" />
+      <recent name="com.example.springbatch_15_1_comprehensiveapplicationexample.batch.job.api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SpringBatch_15_1_ComprehensiveApplicationExample/src/main/resources" />
+      <recent name="$PROJECT_DIR$/SpringBatch_14_2_JobOperationConfiguration/src/main/resources" />
+      <recent name="$PROJECT_DIR$/SpringBatch_14_1_SpringBatchTest/src/main/resources" />
+      <recent name="$PROJECT_DIR$/SpringBatch_14_1_SpringBatchTest/src/test/resources" />
+      <recent name="$PROJECT_DIR$/SpringBatch_13_4_RetryListener/src/main/java/com/example/springbatch_13_4_retrylistener" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SpringBatch_13_3_SkipListener_RetryListener/src/main/java/com/example/spring_batch_13_3_skiplistener_retrylistener" />
+      <recent name="$PROJECT_DIR$/springbatch_9_3_XMLStaxEventItemWriter/src/main/java" />
+      <recent name="$PROJECT_DIR$/SpringBatch_8_2_FlatFileItemReader_Delimetedlinetokenizer/src/main/java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.springbatch_12_3_parallel_steps" />
+      <recent name="com.example.springbatch_12_2_multithreade_step" />
+      <recent name="com.example.springbatch_9_3_xmlstaxeventitemwriter" />
+      <recent name="com.example.springbatch_8_5_staxeventitemreader" />
+      <recent name="com.example.springbatch_6_4_customexitstatus" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.springbatch_15_1_comprehensiveapplicationexample.scheduler" />
+      <recent name="com.example.springbatch_15_1_comprehensiveapplicationexample.batch.chunk.writer" />
+      <recent name="com.example.springbatch_15_1_comprehensiveapplicationexample.batch.chunk.processor" />
+      <recent name="com.example.spring_batch_13_3_skiplistener_retrylistener.skiplistener" />
+      <recent name="com.example.springbatch_13_1_jobexecutionlistener_stepexecutionlistener" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="openRunningConfigInTab" value="true" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringBatch151ComprehensiveApplicationExampleApplication">
+    <configuration name="batch | Send Post start witdh json bdy" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" nameIsGenerated="true" path="$PROJECT_DIR$/SpringBatch_14_2_JobOperationConfiguration/src/main/batch.http" requestIdentifier="Send Post start witdh json bdy" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="batch | Send Post stop withd json body" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" nameIsGenerated="true" path="$PROJECT_DIR$/SpringBatch_14_2_JobOperationConfiguration/src/main/batch.http" index="2" requestIdentifier="Send Post stop withd json body" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="batch | Send restart restart with body" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/SpringBatch_14_2_JobOperationConfiguration/src/main/batch.http" index="3" requestIdentifier="Send restart restart with body" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="SimpleJobTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringBatch_14_1_SpringBatchTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springbatch_14_1_springbatchtest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springbatch_14_1_springbatchtest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springbatch_14_1_springbatchtest.SimpleJobTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="apiService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.batchapiservice.apiservice.ApiServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch101CompositeItemProcessorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_10_1_CompositeItemProcessor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_10_1_compositeitemprocessor.SpringBatch101CompositeItemProcessorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch101RepeatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_10_1_Repeat" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_10_1_repeat.SpringBatch101RepeatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch102ClassifierCompositeItemProcessorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_10_2_ClassifierCompositeItemProcessor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_10_2_classifiercompositeitemprocessor.SpringBatch102ClassifierCompositeItemProcessorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch111RepeatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_11_1_Repeat" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_11_1_repeat.SpringBatch111RepeatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch112FaultTolerantApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_11_2_FaultTolerant" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_11_2_faulttolerant.SpringBatch112FaultTolerantApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch113SkipApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_11_3_Skip" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_11_3_skip.SpringBatch113SkipApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch114Retry1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_11_4_Retry_1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_11_4_retry_1.SpringBatch114Retry1Application" />
+      <option name="ACTIVE_PROFILES" value="mysql" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch121AsyncItemProcessorAsyncItemWriterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_12_1_AsyncItemProcessor_AsyncItemWriter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_12_1_asyncitemprocessor_asyncitemwriter.SpringBatch121AsyncItemProcessorAsyncItemWriterApplication" />
+      <option name="ACTIVE_PROFILES" value="mysql" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch122MultiThreadeStepApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_12_2_Multi-threade_Step" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_12_2_multithreade_step.SpringBatch122MultiThreadeStepApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch123ParallelStepsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_12_3_Parallel_Steps" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_12_3_parallel_steps.SpringBatch123ParallelStepsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch124Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_12_4" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_12_4.SpringBatch124Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch125SynchronizedItemStreamReaderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_12_5_SynchronizedItemStreamReader" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_12_5_synchronizeditemstreamreader.SpringBatch125SynchronizedItemStreamReaderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch131JobExecutionListenerStepExecutionListenerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_13_1_JobExecutionListener_StepExecutionListener" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_13_1_jobexecutionlistener_stepexecutionlistener.SpringBatch131JobExecutionListenerStepExecutionListenerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch132ChunkListenerItemReadListenerItemProcessListApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_13_2_ChunkListener_ItemReadListener_ItemProcessList" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_13_2_chunklistener_itemreadlistener_itemprocesslist.SpringBatch132ChunkListenerItemReadListenerItemProcessListApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch133SkipListenerRetryListenerApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Spring_Batch_13_3_SkipListener_RetryListener" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.spring_batch_13_3_skiplistener_retrylistener.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.spring_batch_13_3_skiplistener_retrylistener.SpringBatch133SkipListenerRetryListenerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch133SkipListenerRetryListenerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Spring_Batch_13_3_SkipListener_RetryListener" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.spring_batch_13_3_skiplistener_retrylistener.retrylistenr.SpringBatch133SkipListenerRetryListenerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch134RetryListenerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_13_4_RetryListener" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_13_4_retrylistener.SpringBatch134RetryListenerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch141SpringBatchTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_14_1_SpringBatchTest" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_14_1_springbatchtest.SpringBatch141SpringBatchTestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch142JobOperationConfigurationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_14_2_JobOperationConfiguration" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_14_2_joboperationconfiguration.SpringBatch142JobOperationConfigurationApplication" />
+      <option name="PROGRAM_PARAMETERS" value="--job.name=fileJob requestDate=20220829" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch1511ApiServiceApplication1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_15_1_1_ApiService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_15_1_1_apiservice.SpringBatch1511ApiServiceApplication" />
+      <option name="PROGRAM_PARAMETERS" value="--server.port=8081" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch1511ApiServiceApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_15_1_1_ApiService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_15_1_1_apiservice.SpringBatch1511ApiServiceApplication" />
+      <option name="PROGRAM_PARAMETERS" value="--server.port=8082" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch1511ApiServiceApplication3" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_15_1_1_ApiService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_15_1_1_apiservice.SpringBatch1511ApiServiceApplication" />
+      <option name="PROGRAM_PARAMETERS" value="--server.port=8083" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch151ComprehensiveApplicationExampleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_15_1_ComprehensiveApplicationExample" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_15_1_comprehensiveapplicationexample.SpringBatch151ComprehensiveApplicationExampleApplication" />
+      <option name="PROGRAM_PARAMETERS" value="20210101" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch33InstanceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-batch" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_3_1_3_instance.SpringBatch33InstanceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch41BatchInitConfigurationApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_4_1_BatchInitConfiguration (1)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringBatchTasklet.SpringBatch41BatchInitConfigurationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch41BatchInitConfigurationApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_4_1_BatchInitConfiguration (3)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringBatch_5_4_Step_startLimitAndAllowStartIfComplte.SpringBatch41BatchInitConfigurationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch41BatchInitConfigurationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_4_1_BatchInitConfiguration" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringBatchTasklet.SpringBatch41BatchInitConfigurationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch610FlowStepApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_6_10_FlowStep" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_10_flowstep.SpringBatch610FlowStepApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch611JobScopeAndStepScopeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springBatch_6_11_JobScopeAndStepScope" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_11_jobscopeandstepscope.SpringBatch611JobScopeAndStepScopeApplication" />
+      <option name="PROGRAM_PARAMETERS" value="--job.name=batchJob message=20220803" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch612JobScopeAndStepScopeArchitectureApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_6_12_JobScopeAndStepScopeArchitecture" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_12_jobscopeandstepscopearchitecture.SpringBatch612JobScopeAndStepScopeArchitectureApplication" />
+      <option name="PROGRAM_PARAMETERS" value="--job.name=batchJob message=20220804" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="INCLUDE_PROVIDED_SCOPE" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch613ChunkConfigurationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_7_1_ChunkConfiguration" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_13_chunkconfiguration.SpringBatch613ChunkConfigurationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch614ChunkOrientedTaskletApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_7_3_ChunkOrientedTasklet" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_14_chunkorientedtasklet.SpringBatch614ChunkOrientedTaskletApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch614ChunkOrientedTaskletApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_7_2_ChunkOrientedTasklet" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_14_chunkorientedtasklet.SpringBatch614ChunkOrientedTaskletApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch615ItemReaderAndItemWriterAndItemProcessorApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_6_15_ItemReaderAndItemWriterAndItemProcessor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_15_itemreaderanditemwriteranditemprocessor.SpringBatch615ItemReaderAndItemWriterAndItemProcessorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch615ItemReaderAndItemWriterAndItemProcessorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_7_4_ItemReaderAndItemWriterAndItemProcessor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_15_itemreaderanditemwriteranditemprocessor.SpringBatch615ItemReaderAndItemWriterAndItemProcessorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch61FlowJobConceptApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_6_1_FlowJobConcept" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_1_flowjobconcept.SpringBatch61FlowJobConceptApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch64CustomExitStatusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_6_4_CustomExitStatus" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_4_customexitstatus.SpringBatch64CustomExitStatusApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch65JobExecutionDeciderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_6_5_JobExecutionDecider" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_5_jobexecutiondecider.SpringBatch65JobExecutionDeciderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch66FlowJobApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_6_6_FlowJob" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_6_flowjob.SpringBatch66FlowJobApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch67SimpleFlowApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_6_7_SimpleFlow" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_7_simpleflow.SpringBatch67SimpleFlowApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch68SimpleFlowExampleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_6_8_SimpleFlowExample" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_8_simpleflowexample.SpringBatch68SimpleFlowExampleApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch69SimpleFlowArchitectureApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_6_9_SimpleFlowArchitecture" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_6_9_simpleflowarchitecture.SpringBatch69SimpleFlowArchitectureApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch75ItemStreamApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_7_5_ItemStream" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_7_5_itemstream.SpringBatch75ItemStreamApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch810ItemReaderAdapterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_8_11_ItemReaderAdapter_sycj" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_10_itemreaderadapter.SpringBatch810ItemReaderAdapterApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch810JpaPagingItemReaderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_8_10_JpaPagingItemReader" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_10_jpapagingitemreader.SpringBatch810JpaPagingItemReaderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch811ItemReaderAdapterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_8_11_ItemReaderAdapter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_11_itemreaderadapter.SpringBatch811ItemReaderAdapterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch81FlatFileItemReaderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_8_1_FlatFileItemReader" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_1_flatfileitemreader.SpringBatch81FlatFileItemReaderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch82FlatFileItemReaderDelimetedlinetokenizerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_8_2_FlatFileItemReader_Delimetedlinetokenizer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_2_flatfileitemreader_delimetedlinetokenizer.SpringBatch82FlatFileItemReaderDelimetedlinetokenizerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch83FixedlengthtokenizerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_8_3_fixedlengthtokenizer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_3_fixedlengthtokenizer.SpringBatch83FixedlengthtokenizerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch84ExceptionHandlingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_8_4_ExceptionHandling" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_4_exceptionhandling.SpringBatch84ExceptionHandlingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch85StaxEventItemReaderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springBatch_8_5_StaxEventItemReader" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_5_staxeventitemreader.SpringBatch85StaxEventItemReaderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch86JsonItemReaderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_8_6_JsonItemReader" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_6_jsonitemreader.SpringBatch86JsonItemReaderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch87JdbcCursorItemReaderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_8_7_JdbcCursorItemReader" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_7_jdbccursoritemreader.SpringBatch87JdbcCursorItemReaderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch88JpaCursorItemReaderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_8_8_JpaCursorItemReader" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_8_jpacursoritemreader.SpringBatch88JpaCursorItemReaderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch89JdbcPagingItemReaderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_8_9_JdbcPagingItemReader" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_8_9_jdbcpagingitemreader.SpringBatch89JdbcPagingItemReaderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch91FlatFileItemWriterDelimetedAndFormatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_9_1_FlatFileItemWriter_DelimetedAndFormat" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_9_1_flatfileitemwriter_delimetedandformat.SpringBatch91FlatFileItemWriterDelimetedAndFormatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch95JobBatchItemWriterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_9_5_JobBatchItemWriter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_9_5_jobbatchitemwriter.SpringBatch95JobBatchItemWriterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatchTasklet" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_4_1_BatchInitConfiguration (2)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringBatchTasklet.SpringBatchTasklet" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch_5_5_Step_TaskletStepArchitecture" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_4_1_BatchInitConfiguration (4)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringBatch_5_6_Step_JobStep.SpringBatch_5_5_Step_TaskletStepArchitecture" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch_5_6_Step_JobStep" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_4_1_BatchInitConfiguration (5)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringBatch_5_6_Step_JobStep.SpringBatch_5_6_Step_JobStep" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBatch_6_3_Transition" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="SpringBatch_6_2_FlowJob (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.SpringBatch_6_3_Transition.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringBatch_6_3_Transition.SpringBatch_6_3_Transition" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBoot96JpaItemWriterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_9_6_JpaItemWriter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springboot_9_6_jpaitemwriter.SpringBoot96JpaItemWriterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBoot97ItemWriteAdapterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBoot_9_7_ItemWriteAdapter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springboot_9_7_itemwriteadapter.SpringBoot97ItemWriteAdapterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springbatch91FlatfileitemwriterFormatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springbatch_9_1_flatfileitemwriter_format" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_9_1_flatfileitemwriter_format.Springbatch91FlatfileitemwriterFormatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springbatch92FlatfileitemwriterFormatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springbatch_9_2_flatfileitemwriter_format" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_9_2_flatfileitemwriter_format.Springbatch92FlatfileitemwriterFormatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springbatch93XmlStaxEventItemWriterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springbatch_9_3_XMLStaxEventItemWriter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_9_3_xmlstaxeventitemwriter.Springbatch93XmlStaxEventItemWriterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springbatch94JsonFileItemWriterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springbatch_9_4_JsonFileItemWriter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbatch_9_4_jsonfileitemwriter.Springbatch94JsonFileItemWriterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sibal" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBatch_6_2_FlowJob (2)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.spring_batch_6_3_transition.sibal" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.batch | Send Post start witdh json bdy" />
+      <item itemvalue="HTTP Request.batch | Send Post stop withd json body" />
+      <item itemvalue="HTTP Request.batch | Send restart restart with body" />
+      <item itemvalue="JUnit.SimpleJobTest" />
+      <item itemvalue="Spring Boot.SpringBatch33InstanceApplication" />
+      <item itemvalue="Spring Boot.sibal" />
+      <item itemvalue="Spring Boot.SpringBatchTasklet" />
+      <item itemvalue="Spring Boot.SpringBatch64CustomExitStatusApplication" />
+      <item itemvalue="Spring Boot.SpringBatch65JobExecutionDeciderApplication" />
+      <item itemvalue="Spring Boot.SpringBatch66FlowJobApplication" />
+      <item itemvalue="Spring Boot.SpringBatch67SimpleFlowApplication" />
+      <item itemvalue="Spring Boot.SpringBatch68SimpleFlowExampleApplication" />
+      <item itemvalue="Spring Boot.SpringBatch69SimpleFlowArchitectureApplication" />
+      <item itemvalue="Spring Boot.SpringBatch610FlowStepApplication" />
+      <item itemvalue="Spring Boot.SpringBatch611JobScopeAndStepScopeApplication" />
+      <item itemvalue="Spring Boot.SpringBatch612JobScopeAndStepScopeArchitectureApplication" />
+      <item itemvalue="Spring Boot.SpringBatch613ChunkConfigurationApplication" />
+      <item itemvalue="Spring Boot.SpringBatch614ChunkOrientedTaskletApplication" />
+      <item itemvalue="Spring Boot.SpringBatch614ChunkOrientedTaskletApplication (1)" />
+      <item itemvalue="Spring Boot.SpringBatch615ItemReaderAndItemWriterAndItemProcessorApplication" />
+      <item itemvalue="Spring Boot.SpringBatch75ItemStreamApplication" />
+      <item itemvalue="Spring Boot.SpringBatch615ItemReaderAndItemWriterAndItemProcessorApplication (1)" />
+      <item itemvalue="Spring Boot.SpringBatch81FlatFileItemReaderApplication" />
+      <item itemvalue="Spring Boot.SpringBatch82FlatFileItemReaderDelimetedlinetokenizerApplication" />
+      <item itemvalue="Spring Boot.SpringBatch83FixedlengthtokenizerApplication" />
+      <item itemvalue="Spring Boot.SpringBatch84ExceptionHandlingApplication" />
+      <item itemvalue="Spring Boot.SpringBatch85StaxEventItemReaderApplication" />
+      <item itemvalue="Spring Boot.SpringBatch86JsonItemReaderApplication" />
+      <item itemvalue="Spring Boot.SpringBatch87JdbcCursorItemReaderApplication" />
+      <item itemvalue="Spring Boot.SpringBatch88JpaCursorItemReaderApplication" />
+      <item itemvalue="Spring Boot.SpringBatch_6_3_Transition" />
+      <item itemvalue="Spring Boot.SpringBatch89JdbcPagingItemReaderApplication" />
+      <item itemvalue="Spring Boot.SpringBatch810JpaPagingItemReaderApplication" />
+      <item itemvalue="Spring Boot.SpringBatch810ItemReaderAdapterApplication" />
+      <item itemvalue="Spring Boot.SpringBatch41BatchInitConfigurationApplication" />
+      <item itemvalue="Spring Boot.SpringBatch_5_6_Step_JobStep" />
+      <item itemvalue="Spring Boot.SpringBatch41BatchInitConfigurationApplication (1)" />
+      <item itemvalue="Spring Boot.SpringBatch41BatchInitConfigurationApplication (2)" />
+      <item itemvalue="Spring Boot.SpringBatch61FlowJobConceptApplication" />
+      <item itemvalue="Spring Boot.SpringBatch_5_5_Step_TaskletStepArchitecture" />
+      <item itemvalue="Spring Boot.SpringBatch811ItemReaderAdapterApplication" />
+      <item itemvalue="Spring Boot.SpringBatch91FlatFileItemWriterDelimetedAndFormatApplication" />
+      <item itemvalue="Spring Boot.Springbatch91FlatfileitemwriterFormatApplication" />
+      <item itemvalue="Spring Boot.Springbatch92FlatfileitemwriterFormatApplication" />
+      <item itemvalue="Spring Boot.Springbatch93XmlStaxEventItemWriterApplication" />
+      <item itemvalue="Spring Boot.Springbatch94JsonFileItemWriterApplication" />
+      <item itemvalue="Spring Boot.SpringBatch95JobBatchItemWriterApplication" />
+      <item itemvalue="Spring Boot.SpringBoot96JpaItemWriterApplication" />
+      <item itemvalue="Spring Boot.SpringBoot97ItemWriteAdapterApplication" />
+      <item itemvalue="Spring Boot.SpringBatch101CompositeItemProcessorApplication" />
+      <item itemvalue="Spring Boot.SpringBatch102ClassifierCompositeItemProcessorApplication" />
+      <item itemvalue="Spring Boot.SpringBatch101RepeatApplication" />
+      <item itemvalue="Spring Boot.SpringBatch111RepeatApplication" />
+      <item itemvalue="Spring Boot.SpringBatch112FaultTolerantApplication" />
+      <item itemvalue="Spring Boot.SpringBatch113SkipApplication" />
+      <item itemvalue="Spring Boot.SpringBatch114Retry1Application" />
+      <item itemvalue="Spring Boot.SpringBatch121AsyncItemProcessorAsyncItemWriterApplication" />
+      <item itemvalue="Spring Boot.SpringBatch122MultiThreadeStepApplication" />
+      <item itemvalue="Spring Boot.SpringBatch123ParallelStepsApplication" />
+      <item itemvalue="Spring Boot.SpringBatch124Application" />
+      <item itemvalue="Spring Boot.SpringBatch125SynchronizedItemStreamReaderApplication" />
+      <item itemvalue="Spring Boot.SpringBatch131JobExecutionListenerStepExecutionListenerApplication" />
+      <item itemvalue="Spring Boot.SpringBatch132ChunkListenerItemReadListenerItemProcessListApplication" />
+      <item itemvalue="Spring Boot.SpringBatch133SkipListenerRetryListenerApplication" />
+      <item itemvalue="Spring Boot.SpringBatch134RetryListenerApplication" />
+      <item itemvalue="Spring Boot.SpringBatch141SpringBatchTestApplication" />
+      <item itemvalue="Spring Boot.SpringBatch142JobOperationConfigurationApplication" />
+      <item itemvalue="Spring Boot.SpringBatch151ComprehensiveApplicationExampleApplication" />
+      <item itemvalue="Spring Boot.ApiServiceApplication" />
+      <item itemvalue="Spring Boot.SpringBatch1511ApiServiceApplication1" />
+      <item itemvalue="Spring Boot.SpringBatch1511ApiServiceApplication2" />
+      <item itemvalue="Spring Boot.SpringBatch1511ApiServiceApplication3" />
+      <item itemvalue="Spring Boot.SpringBatch133SkipListenerRetryListenerApplication (2)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.batch | Send restart restart with body" />
+        <item itemvalue="JUnit.SimpleJobTest" />
+        <item itemvalue="Spring Boot.SpringBatch133SkipListenerRetryListenerApplication (2)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f32f1652-ea5e-4cf9-9f34-5d2d3dcb0d50" name="Changes" comment="" />
+      <created>1658556479913</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658556479913</updated>
+      <workItem from="1658556481732" duration="1046000" />
+      <workItem from="1658557684438" duration="20000" />
+      <workItem from="1658717641984" duration="2669000" />
+      <workItem from="1658730777270" duration="47232000" />
+      <workItem from="1659163545660" duration="61903000" />
+      <workItem from="1660283879234" duration="127000" />
+      <workItem from="1660284009550" duration="62668000" />
+      <workItem from="1660702969267" duration="189000" />
+      <workItem from="1660703163208" duration="11649000" />
+      <workItem from="1660899850768" duration="3616000" />
+      <workItem from="1660919602317" duration="212000" />
+      <workItem from="1660919886810" duration="45174000" />
+      <workItem from="1661498052546" duration="5954000" />
+      <workItem from="1661663407931" duration="18210000" />
+      <workItem from="1661693312505" duration="4298000" />
+      <workItem from="1661738151286" duration="6581000" />
+      <workItem from="1661748145145" duration="2683000" />
+      <workItem from="1661750847867" duration="27728000" />
+      <workItem from="1661824791925" duration="8800000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat : add communication file">
+      <created>1658557039477</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658557039477</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat : add spring batch file">
+      <created>1658557160902</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658557160902</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat : add spring batch file">
+      <created>1659455992468</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659455992468</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat : finish spring batch Example">
+      <created>1661836925504</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661836925504</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat : add communication file" />
+    <MESSAGE value="feat : add spring batch file" />
+    <MESSAGE value="feat : finish spring batch Example" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : finish spring batch Example" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_1_Step_StepBuilderFactory/src/main/java/com/example/SpringBatchTasklet/StepBuilderConfiguration.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_2_Step_TaskletStepConceptAndAPI/src/main/java/com/example/SpringBatchTasklet/TaskletStepConfiguration.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_2_Step_TaskletStepConceptAndAPI/src/main/java/com/example/SpringBatchTasklet/TaskletStepConfiguration.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_6_1_FlowJobConcept/src/main/java/com/example/springbatch_6_1_flowjobconcept/FlowJobConfiguration.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_6_1_FlowJobConcept/src/main/java/com/example/springbatch_6_1_flowjobconcept/FlowJobConfiguration.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_6_1_FlowJobConcept/src/main/java/com/example/springbatch_6_1_flowjobconcept/FlowJobConfiguration.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_6_1_FlowJobConcept/src/main/java/com/example/springbatch_6_1_flowjobconcept/FlowJobConfiguration.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_6_3_Transition/src/main/java/com/example/SpringBatch_6_3_Transition/BatchStatusExitStatusConfiguration2.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Springbatch_9_4_JsonFileItemWriter/src/main/java/com/example/springbatch_9_4_jsonfileitemwriter/Customer.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_13_3_SkipListener/src/main/java/com/example/spring_batch_13_3_skiplistener_retrylistener/retrylistenr/SkipListenerConfiguration.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/SpringBatch_15_1_ComprehensiveApplicationExample/src/main/java/com/example/springbatch_15_1_comprehensiveapplicationexample/service/AbstractApiService.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/SpringBatch_5_3_Step_TaskletStepTasklet/src/main/java/com/example/SpringBatchTasklet/TaskletConfiguration.java</url>
+          <line>42</line>
+          <properties class="com.example.SpringBatchTasklet.TaskletConfiguration" method="step1">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.example.springbatch_15_1_comprehensiveapplicationexample.batch.job.file.FileJobConfiguration$$EnhancerBySpringCGLIB$$aa3285d4" memberName="CGLIB$BOUND" />
+        <PinnedItemInfo parentTag="com.example.springbatch_15_1_comprehensiveapplicationexample.batch.job.file.FileJobConfiguration$$EnhancerBySpringCGLIB$$aa3285d4" memberName="CGLIB$CALLBACK_1" />
+        <PinnedItemInfo parentTag="com.example.springbatch_15_1_comprehensiveapplicationexample.batch.job.file.FileJobConfiguration$$EnhancerBySpringCGLIB$$aa3285d4" memberName="jobBuilderFactory" />
+        <PinnedItemInfo parentTag="org.springframework.batch.core.configuration.annotation.JobBuilderFactory" memberName="jobRepository" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/8_Spring_Batch$SpringBatch41BatchInitConfigurationApplication__2_.ic" NAME="SpringBatch41BatchInitConfigurationApplication (2) Coverage Results" MODIFIED="1658738648488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

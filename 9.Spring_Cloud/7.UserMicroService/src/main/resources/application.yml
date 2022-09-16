@@ -1,0 +1,44 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: user-service
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /h2-console
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+
+greeting:
+  message: Welcome to the Simple E-commerce.
+
+logging:
+  level:
+    com.example.userservice: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans
+#Configuration 정보를 Spring Cloud Config를 활용하여 외부로 뽑아낼거기 때문에 주석처리해주었음
+#token:
+#  # 하루 시간을 ms로 환산한 결과 = 60(초) * 60(분) * 24(시간) *1000(ms를 초로 바꿔주기 위해) = 86400000
+#  expiration_time: 86400000
+#  secret: user_token

@@ -12,7 +12,7 @@ spring:
         user_sql_cooments: true
 
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
 
 #  profiles를 추가하여 secret을 추가하면 application-sercret.yml에 작성된 설정값을 읽을 수 있다
   profiles:

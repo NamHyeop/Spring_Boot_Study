@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/1.ServiceDiscovery_discoveryservice" />
+    <file type="web" url="file://$PROJECT_DIR$/2.ServiceDiscovery_clinet-userservice" />
+    <file type="web" url="file://$PROJECT_DIR$/4.APIGatewayService_userservice1" />
+    <file type="web" url="file://$PROJECT_DIR$/5.APIGatewayService_userservice2" />
+    <file type="web" url="file://$PROJECT_DIR$/6.APIGatewayService_SpringCloudGateway" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/zuul-service/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/actuator-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/first-service/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/config-service/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/second-service/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/catalog-service/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/discoveryservice/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/apigateway-service/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/user-service-no-config/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/user-service-no-security/pom.xml" />
+        <option value="$PROJECT_DIR$/0.praticeExampleCode/apigateway-service-no-config/pom.xml" />
+        <option value="$PROJECT_DIR$/3.APIGatewayService_NetflixZuul/zuul-service/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="18" project-jdk-type="JavaSDK" />
+</project>
